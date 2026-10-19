@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "growth-next-door",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "growth-next-door", "run", "preview", "--", "--host"],
+      "port": 4321
+    }
+  ]
+}

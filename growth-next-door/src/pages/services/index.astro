@@ -1,0 +1,94 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import servicesData from "../../data/services.json";
+
+const categories = [...new Set(servicesData.map((s: any) => s.category))];
+---
+<BaseLayout
+  title="All Marketing Capabilities & Services | Scalify - A Digital Marketing Company"
+  description="Explore all 31 digital marketing, programmatic SEO, paid media, and CRO services engineered by Scalify - A Digital Marketing Company."
+  canonical="https://scalify.com/services"
+>
+  <Nav />
+  <main class="wrap page-container">
+    <header class="page-head">
+      <div class="badge-pill">
+        <span class="pill-dot"></span>
+        <span>FULL-SERVICE ARSENAL • 31 DISCIPLINES</span>
+      </div>
+      <h1 class="serif page-title">Comprehensive Marketing Capabilities</h1>
+      <p class="lede">Scalify - A Digital Marketing Company delivers 31 specialized growth services across paid media, technical SEO, conversion rate optimization, creative production, and revenue architecture across 50 international markets.</p>
+    </header>
+
+    {categories.map((cat: string) => (
+      <section class="cat-section">
+        <div class="cat-header">
+          <h2 class="serif cat-title">{cat}</h2>
+          <span class="cat-count">{servicesData.filter((s: any) => s.category === cat).length} Capabilities</span>
+        </div>
+        <div class="grid">
+          {servicesData.filter((s: any) => s.category === cat).map((s: any) => (
+            <a class="service-card" href={`/services/${s.slug}`}>
+              <div class="card-name">{s.name}</div>
+              <div class="card-desc">{s.shortDesc}</div>
+              <div class="card-arrow">Inspect Capability Architecture →</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-container { padding: 48px 32px 80px; }
+  .page-head { margin-bottom: 48px; max-width: 780px; }
+  .badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #eae5d9;
+    color: #4a453c;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .pill-dot { width: 6px; height: 6px; background: #25d366; border-radius: 50%; }
+  .page-title { font-size: 44px; font-weight: 500; margin: 0 0 16px; color: #1c1c1a; }
+  .lede { font-size: 17.5px; line-height: 1.65; color: #57524a; margin: 0; }
+
+  .cat-section { margin-bottom: 56px; }
+  .cat-header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #e2ddd0; padding-bottom: 12px; margin-bottom: 24px; }
+  .cat-title { font-size: 26px; font-weight: 500; margin: 0; color: #1c1c1a; }
+  .cat-count { font-size: 12.5px; font-weight: 600; color: #8a8375; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .service-card {
+    background: #fff;
+    border: 1px solid #e2ddd0;
+    border-radius: 14px;
+    padding: 24px;
+    text-decoration: none;
+    color: #1c1c1a;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .service-card:hover { border-color: #1c1c1a; transform: translateY(-2px); }
+  .card-name { font-size: 17.5px; font-weight: 600; }
+  .card-desc { font-size: 14.5px; line-height: 1.6; color: #57524a; flex-grow: 1; }
+  .card-arrow { font-size: 13px; font-weight: 600; color: #1c1c1a; margin-top: 10px; }
+
+  @media (max-width: 768px) {
+    .page-container { padding: 32px 20px 60px; }
+    .grid { grid-template-columns: 1fr; }
+    .page-title { font-size: 32px; }
+  }
+</style>

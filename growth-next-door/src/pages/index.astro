@@ -1,0 +1,386 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import WhatsAppForm from "../components/WhatsAppForm.astro";
+import servicesData from "../data/services.json";
+
+const featured = servicesData.slice(0, 9);
+---
+<BaseLayout
+  title="Scalify - A Digital Marketing Company | Paid Media, SEO & Revenue Growth"
+  description="Scalify is a premier digital marketing company engineering performance paid media, programmatic SEO, CRO, and revenue architecture across 50 countries and 500 cities."
+  canonical="https://scalify.com/"
+>
+  <Nav />
+  <main>
+    <!-- Hero Section -->
+    <section class="wrap hero">
+      <div class="hero-copy">
+        <div class="badge-pill">
+          <span class="pill-dot"></span>
+          <span>SCALIFY — A DIGITAL MARKETING COMPANY</span>
+        </div>
+        <h1 class="serif">Performance Marketing Built for Measurable Revenue.</h1>
+        <p class="lede">From paid media and programmatic SEO to conversion rate architecture, Scalify builds predictable acquisition systems for ambitious brands across 50 countries.</p>
+        
+        <div class="hero-cta-group">
+          <a href="/services" class="btn-primary">Explore All 31 Services →</a>
+          <a href="/countries" class="btn-secondary">Browse 50 Countries</a>
+        </div>
+
+        <div class="trust-metrics">
+          <div class="metric">
+            <span class="metric-val">50</span>
+            <span class="metric-lbl">Countries Covered</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">500+</span>
+            <span class="metric-lbl">Commercial City Hubs</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">31</span>
+            <span class="metric-lbl">Specialized Services</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">Direct</span>
+            <span class="metric-lbl">WhatsApp Access</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-form-box" id="contact">
+        <WhatsAppForm formId="home-hero-form" />
+      </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="wrap services-section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">OUR CAPABILITIES</div>
+          <h2 class="serif">Specialized Growth Services</h2>
+          <p class="section-sub">Engineered to drive commercial pipeline, lower CAC, and scale lifetime customer value.</p>
+        </div>
+        <a href="/services" class="view-all-link">View all 31 services →</a>
+      </div>
+      
+      <div class="grid">
+        {featured.map((s: any) => (
+          <a class="service-card" href={`/services/${s.slug}`}>
+            <div class="card-cat">{s.category}</div>
+            <div class="card-name">{s.name}</div>
+            <div class="card-desc">{s.shortDesc}</div>
+            <div class="card-arrow">Learn more →</div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Global Presence Section -->
+    <section class="wrap locations-section">
+      <div class="locations-box">
+        <div class="locations-text">
+          <div class="eyebrow-light">GLOBAL REACH & LOCAL EXPERTISE</div>
+          <h2 class="serif">Serving Enterprises Across 50 Countries & 500 Cities.</h2>
+          <p>Whether targeting domestic flagship cities or expanding into export markets, Scalify adapts currency billing, search intent, and platform regulations for true local dominance.</p>
+        </div>
+        <div class="locations-action">
+          <a href="/countries" class="locations-btn">Explore Global Markets →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile Sticky Action Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="https://wa.me/916353583148?text=Hi%20Scalify,%20I'd%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="mobile-sticky-btn">
+      <span>Instant WhatsApp Consultation</span>
+    </a>
+  </div>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    gap: 56px;
+    align-items: flex-start;
+    padding: 64px 32px 80px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e2ddd0;
+  }
+  .hero-copy {
+    flex: 1.2;
+    min-width: 320px;
+  }
+  .badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #eae5d9;
+    color: #4a453c;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+  }
+  .pill-dot {
+    width: 6px;
+    height: 6px;
+    background: #25d366;
+    border-radius: 50%;
+  }
+  h1 {
+    font-size: 50px;
+    line-height: 1.15;
+    font-weight: 500;
+    margin: 0 0 24px;
+    color: #1c1c1a;
+  }
+  .lede {
+    font-size: 18.5px;
+    line-height: 1.7;
+    color: #4a453c;
+    max-width: 580px;
+    margin: 0 0 32px;
+  }
+  .hero-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: #1c1c1a;
+    color: #f7f5f0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 13px 26px;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+  }
+  .btn-primary:hover {
+    background: #38342d;
+  }
+  .btn-secondary {
+    background: #fff;
+    color: #1c1c1a;
+    border: 1px solid #d8d0c2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 13px 26px;
+    border-radius: 8px;
+    transition: border-color 0.15s ease;
+  }
+  .btn-secondary:hover {
+    border-color: #1c1c1a;
+  }
+  .trust-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    background: #fff;
+    border: 1px solid #e2ddd0;
+    border-radius: 12px;
+    padding: 16px 20px;
+  }
+  .metric {
+    display: flex;
+    flex-direction: column;
+  }
+  .metric-val {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c1c1a;
+  }
+  .metric-lbl {
+    font-size: 11.5px;
+    color: #8a8375;
+    margin-top: 2px;
+    text-transform: uppercase;
+  }
+  .hero-form-box {
+    flex: 0.9;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .services-section {
+    padding: 72px 32px 80px;
+  }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .eyebrow {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #8a8375;
+    margin-bottom: 8px;
+  }
+  .section-head h2 {
+    font-size: 34px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    color: #1c1c1a;
+  }
+  .section-sub {
+    font-size: 16px;
+    color: #57524a;
+    margin: 0;
+  }
+  .view-all-link {
+    font-size: 14.5px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #1c1c1a;
+    padding-bottom: 2px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .service-card {
+    background: #fff;
+    border: 1px solid #e2ddd0;
+    border-radius: 14px;
+    padding: 26px;
+    text-decoration: none;
+    color: #1c1c1a;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .service-card:hover {
+    border-color: #1c1c1a;
+    transform: translateY(-2px);
+  }
+  .card-cat {
+    font-size: 11px;
+    font-weight: 600;
+    color: #8a8375;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .card-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .card-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #57524a;
+    flex-grow: 1;
+    margin-bottom: 16px;
+  }
+  .card-arrow {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1c1c1a;
+  }
+
+  .locations-section {
+    padding: 0 32px 90px;
+  }
+  .locations-box {
+    background: #1c1c1a;
+    color: #f7f5f0;
+    border-radius: 20px;
+    padding: 56px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    flex-wrap: wrap;
+  }
+  .eyebrow-light {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #b5ad9e;
+    margin-bottom: 12px;
+  }
+  .locations-box h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0 0 14px;
+  }
+  .locations-box p {
+    font-size: 15.5px;
+    color: #d9cbb8;
+    max-width: 540px;
+    line-height: 1.65;
+    margin: 0;
+  }
+  .locations-btn {
+    background: #f7f5f0;
+    color: #1c1c1a;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+  }
+  .locations-btn:hover {
+    background: #e5ded5;
+  }
+
+  .mobile-sticky-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(28, 28, 26, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 12px 16px;
+    z-index: 999;
+  }
+  .mobile-sticky-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14.5px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .hero { gap: 36px; padding: 40px 20px 60px; }
+    .hero-form-box { width: 100%; justify-content: flex-start; }
+    h1 { font-size: 38px; }
+    .locations-box { padding: 36px 28px; }
+  }
+
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+    .trust-metrics { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    h1 { font-size: 30px; }
+    .mobile-sticky-bar { display: block; }
+    .services-section { padding: 48px 20px 60px; }
+    .locations-section { padding: 0 20px 80px; }
+  }
+</style>

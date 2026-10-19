@@ -1,0 +1,187 @@
+---
+import servicesData from "../data/services.json";
+
+interface Props {
+  preselectedService?: string; // service name to preselect
+  cityLabel?: string; // e.g. "Austin, United States" - included in the WhatsApp message
+  formId?: string;
+}
+const { preselectedService, cityLabel, formId = "wa-form" } = Astro.props;
+const WHATSAPP_NUMBER = "916353583148"; // +91 6353583148, no plus/spaces for wa.me
+---
+<div class="wa-form-card" id={formId}>
+  <div class="wa-card-header">
+    <div class="wa-badge">
+      <span class="wa-pulse"></span>
+      <span>Direct WhatsApp Strategy</span>
+    </div>
+    <div class="wa-form-title serif">Talk to a Growth Strategist</div>
+    <p class="wa-form-subtitle">Same-day review & custom campaign roadmap.</p>
+  </div>
+
+  <form class="wa-form" data-wa-form data-city={cityLabel ?? ""}>
+    <label class="wa-field">
+      <span>Your Name</span>
+      <input type="text" name="name" required placeholder="e.g. Sarah Jenkins" autocomplete="name" />
+    </label>
+    <label class="wa-field">
+      <span>Phone / WhatsApp Number</span>
+      <input type="tel" name="phone" required placeholder="e.g. +1 555 123 4567" autocomplete="tel" />
+    </label>
+    <label class="wa-field">
+      <span>Required Capability</span>
+      <select name="requirement" required>
+        <option value="" disabled selected={!preselectedService}>Select a service</option>
+        {servicesData.map((s: any) => (
+          <option value={s.name} selected={preselectedService === s.name}>{s.name}</option>
+        ))}
+      </select>
+    </label>
+    <label class="wa-field">
+      <span>Project Details / Current Goals</span>
+      <textarea name="message" rows="3" placeholder="Tell us about your target market, timeline, or current ad spend..."></textarea>
+    </label>
+    <button type="submit" class="wa-submit">
+      <svg class="wa-btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
+      </svg>
+      <span>Connect on WhatsApp</span>
+    </button>
+  </form>
+  <div class="wa-footnote">
+    🔒 100% confidential. No spam. Direct access to practitioners.
+  </div>
+</div>
+
+<style>
+  .wa-form-card {
+    background: #fff;
+    border: 1px solid #e2ddd0;
+    border-radius: 20px;
+    padding: 28px 24px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  }
+  .wa-card-header {
+    margin-bottom: 20px;
+  }
+  .wa-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #eafaf1;
+    color: #12753a;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .wa-pulse {
+    width: 6px;
+    height: 6px;
+    background: #25d366;
+    border-radius: 50%;
+  }
+  .wa-form-title {
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: #1c1c1a;
+  }
+  .wa-form-subtitle {
+    font-size: 13.5px;
+    color: #6b6459;
+    margin: 0;
+  }
+  .wa-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .wa-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a453c;
+  }
+  .wa-field input, .wa-field select, .wa-field textarea {
+    font-family: 'Work Sans', system-ui, sans-serif;
+    font-size: 14.5px;
+    padding: 11px 14px;
+    border: 1px solid #d8d2c2;
+    border-radius: 8px;
+    background: #fbfaf7;
+    color: #1c1c1a;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .wa-field input:focus, .wa-field select:focus, .wa-field textarea:focus {
+    outline: none;
+    border-color: #1c1c1a;
+    background: #fff;
+  }
+  .wa-field textarea { resize: vertical; }
+  .wa-submit {
+    margin-top: 6px;
+    background: #25d366;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+  .wa-submit:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+  }
+  .wa-footnote {
+    margin-top: 14px;
+    font-size: 11.5px;
+    color: #8a8375;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .wa-form-card {
+      padding: 22px 18px;
+    }
+  }
+</style>
+
+<script define:vars={{ WHATSAPP_NUMBER, formId }}>
+  const root = document.getElementById(formId);
+  const form = root?.querySelector("[data-wa-form]");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = (data.get("name") || "").toString().trim();
+      const phone = (data.get("phone") || "").toString().trim();
+      const requirement = (data.get("requirement") || "").toString().trim();
+      const message = (data.get("message") || "").toString().trim();
+      const city = form.getAttribute("data-city") || "";
+
+      let text = `Hi Scalify - A Digital Marketing Company, I'd like to enquire about your services.\n\n`;
+      text += `• Name: ${name}\n`;
+      text += `• Phone: ${phone}\n`;
+      text += `• Required Service: ${requirement}\n`;
+      if (city) text += `• Target Location: ${city}\n`;
+      if (message) text += `• Project Brief: ${message}\n`;
+
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+      window.open(url, "_blank");
+    });
+  }
+</script>

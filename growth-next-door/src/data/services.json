@@ -1,0 +1,2358 @@
+[
+  {
+    "slug": "meta-ads",
+    "name": "Meta Ads (Facebook & Instagram)",
+    "category": "Paid Advertising",
+    "shortDesc": "Facebook and Instagram ad campaigns managed for pipeline, not just impressions.",
+    "whoFor": "Businesses that need predictable leads or sales from Facebook and Instagram audiences.",
+    "deliverables": [
+      "Campaign strategy & audience research",
+      "Ad creative direction (static, carousel, video)",
+      "Pixel & conversion API setup",
+      "Daily bid and budget management",
+      "Weekly performance reporting"
+    ],
+    "benefits": [
+      "Full account access and transparency",
+      "Creative testing built into every campaign",
+      "Spend optimized toward your actual sales, not clicks",
+      "No long-term lock-in contracts"
+    ],
+    "faqService": [
+      {
+        "q": "How much ad spend do I need to start?",
+        "a": "Most accounts see meaningful data starting around $1,000-$1,500/month in ad spend, separate from our management fee."
+      },
+      {
+        "q": "Do you write the ad creative or do I?",
+        "a": "We handle strategy, copy and creative direction; you approve before anything goes live."
+      },
+      {
+        "q": "How is Meta Ads different from Google Ads for my business?",
+        "a": "Meta reaches people based on interests and behavior before they're actively searching; Google Ads catches people already searching for what you sell."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Meta Ads Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Facebook Ads Management",
+        "intent": "Ongoing management service angle"
+      },
+      {
+        "keyword": "Instagram Ads Agency",
+        "intent": "Platform-specific - Instagram only"
+      },
+      {
+        "keyword": "Facebook Ads Cost",
+        "intent": "Pricing/budget research intent"
+      },
+      {
+        "keyword": "Meta Ads for E-commerce",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "Facebook Ads Audit Services",
+        "intent": "One-off diagnostic service"
+      },
+      {
+        "keyword": "Meta Ads Management Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "Instagram Ads for Small Business",
+        "intent": "Audience-specific - SMB"
+      },
+      {
+        "keyword": "Facebook Ads Consultant",
+        "intent": "Freelance/consultant intent"
+      },
+      {
+        "keyword": "Meta Ads Campaign Optimization",
+        "intent": "Performance-improvement intent"
+      }
+    ]
+  },
+  {
+    "slug": "google-ads",
+    "name": "Google Ads (Search, Display, PMax)",
+    "category": "Paid Advertising",
+    "shortDesc": "Search, Display and Performance Max campaigns built around cost-per-acquisition, not vanity clicks.",
+    "whoFor": "Businesses with clear buyer intent - people already searching for what you offer.",
+    "deliverables": [
+      "Keyword research & campaign structure",
+      "Ad copy and extensions",
+      "Conversion tracking setup",
+      "Bid strategy management",
+      "Monthly performance & spend reports"
+    ],
+    "benefits": [
+      "Budgets protected from wasted clicks",
+      "Clear cost-per-lead reporting",
+      "Works alongside your SEO, not against it",
+      "Google Partner-level account management"
+    ],
+    "faqService": [
+      {
+        "q": "Is Google Ads better than SEO for fast results?",
+        "a": "Yes for speed - Google Ads can drive traffic the day it launches, while SEO typically takes 3-6 months to build momentum."
+      },
+      {
+        "q": "What's a realistic monthly budget?",
+        "a": "It depends on your industry's cost-per-click, but we'll model this out in a free audit before you commit to a number."
+      },
+      {
+        "q": "Do you manage Performance Max separately from Search?",
+        "a": "Yes - we structure PMax and Search as separate campaigns so PMax doesn't cannibalize your branded search traffic."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Google Ads Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Google Ads Management Services",
+        "intent": "Ongoing management service angle"
+      },
+      {
+        "keyword": "Google Search Ads Agency",
+        "intent": "Platform-specific - Search only"
+      },
+      {
+        "keyword": "Google Display Ads Agency",
+        "intent": "Platform-specific - Display only"
+      },
+      {
+        "keyword": "Google Performance Max Agency",
+        "intent": "Platform-specific - PMax only"
+      },
+      {
+        "keyword": "Google Ads Audit",
+        "intent": "One-off diagnostic service"
+      },
+      {
+        "keyword": "Google Ads Cost",
+        "intent": "Pricing/budget research intent"
+      },
+      {
+        "keyword": "PPC Management Agency",
+        "intent": "Broader PPC umbrella term"
+      },
+      {
+        "keyword": "Google Ads for E-commerce",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "Google Ads Consultant",
+        "intent": "Freelance/consultant intent"
+      }
+    ]
+  },
+  {
+    "slug": "tiktok-ads",
+    "name": "TikTok Ads",
+    "category": "Paid Advertising",
+    "shortDesc": "TikTok ad campaigns built around native, scroll-stopping creative rather than repurposed banner ads.",
+    "whoFor": "Brands targeting younger audiences or selling visually engaging products.",
+    "deliverables": [
+      "Native-format creative direction",
+      "Spark Ads (boosted organic posts) setup",
+      "Audience & interest targeting",
+      "Pixel and event tracking setup",
+      "Weekly creative refresh & reporting"
+    ],
+    "benefits": [
+      "Creative that doesn't feel like an ad",
+      "Lower CPMs than most other platforms currently",
+      "Fast creative iteration cycles",
+      "Direct integration with TikTok Shop where relevant"
+    ],
+    "faqService": [
+      {
+        "q": "Do I need to make my own TikTok videos?",
+        "a": "We can direct and edit creative for you, though authentic in-app style footage usually performs best - we'll guide you on what to film."
+      },
+      {
+        "q": "Is TikTok Ads worth it for a B2B business?",
+        "a": "It depends on your audience - we'll tell you honestly in an audit if TikTok fits your buyer, rather than sell you a platform that doesn't."
+      },
+      {
+        "q": "How does TikTok Shop integration work?",
+        "a": "If you sell products, we can connect your catalog directly so ads lead to in-app checkout, reducing drop-off."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "TikTok Ads Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "TikTok Ads Management",
+        "intent": "Ongoing management service angle"
+      },
+      {
+        "keyword": "TikTok Advertising Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "TikTok Ads for E-commerce",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "TikTok Ads Cost",
+        "intent": "Pricing/budget research intent"
+      },
+      {
+        "keyword": "TikTok Creative Ads Agency",
+        "intent": "Creative production angle"
+      },
+      {
+        "keyword": "TikTok Ads Consultant",
+        "intent": "Freelance/consultant intent"
+      },
+      {
+        "keyword": "TikTok Shop Ads Management",
+        "intent": "Platform-specific - TikTok Shop"
+      },
+      {
+        "keyword": "TikTok Ads for Small Business",
+        "intent": "Audience-specific - SMB"
+      },
+      {
+        "keyword": "TikTok Ads Campaign Strategy",
+        "intent": "Strategy/planning intent"
+      }
+    ]
+  },
+  {
+    "slug": "linkedin-ads",
+    "name": "LinkedIn Ads (for B2B clients)",
+    "category": "Paid Advertising",
+    "shortDesc": "LinkedIn campaigns built for B2B pipelines - lead gen forms, sponsored content and ABM targeting.",
+    "whoFor": "B2B and SaaS companies selling to a defined list of companies or job titles.",
+    "deliverables": [
+      "Audience & job-title targeting setup",
+      "Lead Gen Form configuration",
+      "Sponsored content creative",
+      "ABM list-based campaign setup",
+      "Monthly pipeline-attribution reporting"
+    ],
+    "benefits": [
+      "Built for long B2B sales cycles, not instant sales",
+      "Direct sync with your CRM for lead follow-up",
+      "Account-based targeting down to named companies",
+      "Reporting tied to pipeline, not just leads"
+    ],
+    "faqService": [
+      {
+        "q": "Why is LinkedIn Ads more expensive than Meta or Google?",
+        "a": "LinkedIn's targeting is by job title and company, which is more valuable data - so CPCs are higher but lead quality for B2B is usually much better."
+      },
+      {
+        "q": "Can you target a specific list of companies?",
+        "a": "Yes - Account-Based Marketing (ABM) campaigns let you upload a target account list and show ads only to people at those companies."
+      },
+      {
+        "q": "Do Lead Gen Forms work better than sending traffic to our site?",
+        "a": "Usually yes for LinkedIn specifically, since forms pre-fill with the user's profile data and remove friction."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "LinkedIn Ads Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "LinkedIn Ads Management",
+        "intent": "Ongoing management service angle"
+      },
+      {
+        "keyword": "LinkedIn Ads for B2B",
+        "intent": "Vertical-specific - B2B"
+      },
+      {
+        "keyword": "LinkedIn Lead Gen Ads Agency",
+        "intent": "Lead-gen format specific"
+      },
+      {
+        "keyword": "LinkedIn Ads Cost",
+        "intent": "Pricing/budget research intent"
+      },
+      {
+        "keyword": "LinkedIn Advertising Consultant",
+        "intent": "Freelance/consultant intent"
+      },
+      {
+        "keyword": "LinkedIn Ads for SaaS",
+        "intent": "Vertical-specific - SaaS"
+      },
+      {
+        "keyword": "LinkedIn Sponsored Content Agency",
+        "intent": "Format-specific - sponsored content"
+      },
+      {
+        "keyword": "LinkedIn Ads Strategy Services",
+        "intent": "Strategy/planning intent"
+      },
+      {
+        "keyword": "LinkedIn ABM Advertising Agency",
+        "intent": "Account-based marketing angle"
+      }
+    ]
+  },
+  {
+    "slug": "retargeting-remarketing-campaigns",
+    "name": "Retargeting/Remarketing Campaigns",
+    "category": "Paid Advertising",
+    "shortDesc": "Retargeting campaigns across Meta and Google that bring back visitors who didn't convert the first time.",
+    "whoFor": "Any business with website traffic that isn't converting on the first visit.",
+    "deliverables": [
+      "Audience segmentation by visitor behavior",
+      "Dynamic product ads for e-commerce",
+      "Cross-platform retargeting setup (Meta + Google)",
+      "Frequency capping & fatigue management",
+      "Conversion-lift reporting"
+    ],
+    "benefits": [
+      "Recovers revenue you're already paying to acquire",
+      "Usually your lowest cost-per-conversion channel",
+      "Works across every device a visitor used",
+      "Integrates with your existing pixel data"
+    ],
+    "faqService": [
+      {
+        "q": "Isn't retargeting the same as just running more ads?",
+        "a": "No - retargeting only shows ads to people who've already visited your site, which is why it typically converts at 2-3x the rate of cold traffic."
+      },
+      {
+        "q": "How do you avoid annoying repeat visitors?",
+        "a": "We cap ad frequency and rotate creative so the same person doesn't see the same ad dozens of times."
+      },
+      {
+        "q": "Do you need Meta and Google to be connected?",
+        "a": "No - we run them as separate but coordinated campaigns so we're not double-counting the same conversion."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Retargeting Ads Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Remarketing Campaign Management",
+        "intent": "Ongoing management service angle"
+      },
+      {
+        "keyword": "Dynamic Retargeting Ads Services",
+        "intent": "Format-specific - dynamic ads"
+      },
+      {
+        "keyword": "Facebook Retargeting Agency",
+        "intent": "Platform-specific - Facebook"
+      },
+      {
+        "keyword": "Google Display Remarketing Services",
+        "intent": "Platform-specific - Display"
+      },
+      {
+        "keyword": "Cart Abandonment Retargeting Ads",
+        "intent": "Use-case specific - cart abandonment"
+      },
+      {
+        "keyword": "Retargeting Ads for E-commerce",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "Cross-Platform Retargeting Agency",
+        "intent": "Multi-channel framing"
+      },
+      {
+        "keyword": "Retargeting Ads Cost",
+        "intent": "Pricing/budget research intent"
+      },
+      {
+        "keyword": "Retargeting Campaign Audit",
+        "intent": "One-off diagnostic service"
+      }
+    ]
+  },
+  {
+    "slug": "local-seo-google-business-profile-optimization",
+    "name": "Local SEO / Google Business Profile Optimization",
+    "category": "SEO & Organic Growth",
+    "shortDesc": "Local search and Google Maps visibility for businesses that depend on nearby customers finding them.",
+    "whoFor": "Any business with a physical location or a defined local service area.",
+    "deliverables": [
+      "Google Business Profile audit & optimization",
+      "Local citation building & cleanup",
+      "Review generation strategy",
+      "Local keyword & map-pack tracking",
+      "Monthly local ranking report"
+    ],
+    "benefits": [
+      "Improves visibility in the Google Maps 3-pack",
+      "Builds trust through reviews and accurate listings",
+      "Compounds over time unlike paid ads",
+      "Especially strong ROI for service-area businesses"
+    ],
+    "faqService": [
+      {
+        "q": "How long does local SEO take to show results?",
+        "a": "Most businesses see initial map-pack movement within 60-90 days, with stronger gains by month 4-6."
+      },
+      {
+        "q": "Do you handle review responses too?",
+        "a": "We can set up a review-generation system and provide response templates; whether we post replies ourselves is a service add-on."
+      },
+      {
+        "q": "What if I have multiple locations?",
+        "a": "We handle multi-location profiles as a coordinated set so listings stay consistent and don't compete with each other."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Local SEO Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Google Business Profile Optimization",
+        "intent": "Platform-specific - GBP"
+      },
+      {
+        "keyword": "Local SEO Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "Google Maps Ranking Services",
+        "intent": "Outcome-specific - map pack"
+      },
+      {
+        "keyword": "Local SEO Audit",
+        "intent": "One-off diagnostic service"
+      },
+      {
+        "keyword": "Local SEO for Small Business",
+        "intent": "Audience-specific - SMB"
+      },
+      {
+        "keyword": "Google Business Profile Management",
+        "intent": "Ongoing management service angle"
+      },
+      {
+        "keyword": "Local Citation Building Services",
+        "intent": "Tactic-specific - citations"
+      },
+      {
+        "keyword": "Local SEO Consultant",
+        "intent": "Freelance/consultant intent"
+      },
+      {
+        "keyword": "Multi-Location Local SEO Services",
+        "intent": "Use-case specific - multi-location"
+      }
+    ]
+  },
+  {
+    "slug": "technical-seo-audits",
+    "name": "Technical SEO Audits",
+    "category": "SEO & Organic Growth",
+    "shortDesc": "A full technical diagnostic of your site's crawlability, speed and indexing health.",
+    "whoFor": "Sites with stalled organic traffic, recent redesigns, or unexplained ranking drops.",
+    "deliverables": [
+      "Full crawl & indexing analysis",
+      "Core Web Vitals & speed diagnostics",
+      "Schema markup review",
+      "Redirect & broken-link audit",
+      "Prioritized fix roadmap"
+    ],
+    "benefits": [
+      "Finds issues invisible in normal analytics",
+      "Prevents future ranking drops before launch",
+      "Often the fastest way to unlock stalled rankings",
+      "Delivered as a clear, prioritized action list"
+    ],
+    "faqService": [
+      {
+        "q": "How is this different from a free online SEO checker?",
+        "a": "Automated checkers flag surface issues; we manually verify what's actually hurting your rankings versus what's cosmetic noise."
+      },
+      {
+        "q": "Do you also fix the issues you find?",
+        "a": "Yes, or we hand the prioritized list to your existing developer - either way works."
+      },
+      {
+        "q": "How often should a technical audit be repeated?",
+        "a": "Roughly every 6-12 months, or immediately after any site migration or major redesign."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Technical SEO Audit Services",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Website SEO Audit Agency",
+        "intent": "Broader audit framing"
+      },
+      {
+        "keyword": "Core Web Vitals Optimization",
+        "intent": "Tactic-specific - CWV"
+      },
+      {
+        "keyword": "Site Speed SEO Services",
+        "intent": "Tactic-specific - speed"
+      },
+      {
+        "keyword": "SEO Migration Audit",
+        "intent": "Use-case specific - site migration"
+      },
+      {
+        "keyword": "Crawlability & Indexing Audit",
+        "intent": "Tactic-specific - crawl/index"
+      },
+      {
+        "keyword": "Technical SEO Consultant",
+        "intent": "Freelance/consultant intent"
+      },
+      {
+        "keyword": "E-commerce Technical SEO Audit",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "Schema Markup Implementation Services",
+        "intent": "Tactic-specific - schema"
+      },
+      {
+        "keyword": "SEO Health Check Services",
+        "intent": "Diagnostic/one-off framing"
+      }
+    ]
+  },
+  {
+    "slug": "on-page-content-seo",
+    "name": "On-page & Content SEO",
+    "category": "SEO & Organic Growth",
+    "shortDesc": "Keyword-mapped page structure and content built to earn rankings, not just include keywords.",
+    "whoFor": "Businesses whose pages aren't ranking despite having decent content.",
+    "deliverables": [
+      "Keyword mapping per page",
+      "Title, meta and header optimization",
+      "Internal linking structure",
+      "Content gap analysis vs. competitors",
+      "Ongoing content calendar"
+    ],
+    "benefits": [
+      "Content built around real search intent",
+      "Improves both rankings and time-on-page",
+      "Reduces keyword cannibalization across your site",
+      "Feeds long-term topical authority"
+    ],
+    "faqService": [
+      {
+        "q": "Do you write new content or optimize what I have?",
+        "a": "Both - we audit existing pages first, then recommend which to optimize versus which need new content entirely."
+      },
+      {
+        "q": "How many keywords can one page realistically target?",
+        "a": "Usually one primary keyword plus 3-5 closely related terms; spreading further dilutes relevance."
+      },
+      {
+        "q": "Will AI-generated content hurt my rankings?",
+        "a": "Poorly-edited AI content can, since it often reads as generic; we write and edit everything for genuine expertise and specificity."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "On-Page SEO Services",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Content SEO Agency",
+        "intent": "Broader content-SEO framing"
+      },
+      {
+        "keyword": "SEO Content Writing Services",
+        "intent": "Deliverable-specific - writing"
+      },
+      {
+        "keyword": "Keyword Optimization Services",
+        "intent": "Tactic-specific - keywords"
+      },
+      {
+        "keyword": "On-Page SEO Audit",
+        "intent": "One-off diagnostic service"
+      },
+      {
+        "keyword": "Blog SEO Services",
+        "intent": "Content-type specific - blog"
+      },
+      {
+        "keyword": "SEO Content Strategy Agency",
+        "intent": "Strategy/planning intent"
+      },
+      {
+        "keyword": "Landing Page SEO Optimization",
+        "intent": "Content-type specific - landing pages"
+      },
+      {
+        "keyword": "SEO Copywriting Agency",
+        "intent": "Deliverable-specific - copywriting"
+      },
+      {
+        "keyword": "Content Gap Analysis Services",
+        "intent": "Diagnostic/one-off framing"
+      }
+    ]
+  },
+  {
+    "slug": "link-building",
+    "name": "Link Building",
+    "category": "SEO & Organic Growth",
+    "shortDesc": "Editorial backlinks earned through outreach, guest posts and digital PR - never link farms.",
+    "whoFor": "Sites competing in industries where content alone isn't enough to rank.",
+    "deliverables": [
+      "Backlink gap analysis vs. competitors",
+      "Outreach & guest post placement",
+      "Digital PR campaigns",
+      "Broken-link & niche-edit opportunities",
+      "Monthly link acquisition report"
+    ],
+    "benefits": [
+      "Builds domain authority that compounds over years",
+      "Every link vetted for real relevance and quality",
+      "No risk of manual penalties from spammy tactics",
+      "Tracks competitor link velocity, not just your own"
+    ],
+    "faqService": [
+      {
+        "q": "How many links do I actually need?",
+        "a": "It depends on your competitors' link profiles - we benchmark this in the first month rather than quote a generic number."
+      },
+      {
+        "q": "Do you guarantee specific domain authority scores?",
+        "a": "No reputable agency can guarantee a DA score since it's a third-party metric outside anyone's control - we focus on real referral traffic and rankings instead."
+      },
+      {
+        "q": "Is guest posting still effective in 2026?",
+        "a": "Yes, when done on genuinely relevant, real-traffic sites - it's the mass, low-quality version of guest posting that stopped working."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Link Building Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Backlink Building Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "Guest Posting Services",
+        "intent": "Tactic-specific - guest posts"
+      },
+      {
+        "keyword": "White Hat Link Building",
+        "intent": "Method/quality-specific"
+      },
+      {
+        "keyword": "Local Link Building Services",
+        "intent": "Vertical-specific - local"
+      },
+      {
+        "keyword": "Link Building for E-commerce",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "Digital PR Link Building Agency",
+        "intent": "Method-specific - digital PR"
+      },
+      {
+        "keyword": "Broken Link Building Services",
+        "intent": "Tactic-specific - broken links"
+      },
+      {
+        "keyword": "Niche Edit Link Building",
+        "intent": "Tactic-specific - niche edits"
+      },
+      {
+        "keyword": "Link Building Audit Services",
+        "intent": "Diagnostic/one-off framing"
+      }
+    ]
+  },
+  {
+    "slug": "motion-graphics-video-editing",
+    "name": "Motion Graphics & Video Editing",
+    "category": "Content & Creative",
+    "shortDesc": "Motion graphics and video editing for ads, explainers and social content.",
+    "whoFor": "Brands that need scroll-stopping video but don't have an in-house editor.",
+    "deliverables": [
+      "Storyboarding & script support",
+      "Motion graphics & animation",
+      "Ad-cut video editing",
+      "Sound design & captions",
+      "Platform-specific export formats"
+    ],
+    "benefits": [
+      "Cuts built for retention, not just polish",
+      "Fast turnaround for ad-testing cycles",
+      "Consistent visual style across every asset",
+      "Formats delivered ready for every platform"
+    ],
+    "faqService": [
+      {
+        "q": "Do you shoot original footage or only edit?",
+        "a": "We primarily edit and animate; for original filming we can direct a local shoot or work from your existing footage/stock."
+      },
+      {
+        "q": "How fast is turnaround on a single video?",
+        "a": "Typically 3-5 business days depending on complexity and revision rounds."
+      },
+      {
+        "q": "Can you match our existing brand style?",
+        "a": "Yes - we start by studying your existing assets so new video feels like the same brand, not a new one."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Motion Graphics Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Video Editing Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "Explainer Video Production",
+        "intent": "Format-specific - explainer video"
+      },
+      {
+        "keyword": "Animated Video Agency",
+        "intent": "Format-specific - animation"
+      },
+      {
+        "keyword": "Corporate Video Editing Services",
+        "intent": "Audience-specific - corporate"
+      },
+      {
+        "keyword": "Social Media Video Editing",
+        "intent": "Channel-specific - social"
+      },
+      {
+        "keyword": "Product Video Animation Services",
+        "intent": "Use-case specific - product video"
+      },
+      {
+        "keyword": "Motion Design for Ads",
+        "intent": "Use-case specific - ad creative"
+      },
+      {
+        "keyword": "Video Editing for YouTube",
+        "intent": "Channel-specific - YouTube"
+      },
+      {
+        "keyword": "2D Animation Services",
+        "intent": "Format-specific - 2D animation"
+      }
+    ]
+  },
+  {
+    "slug": "graphic-design",
+    "name": "Graphic Design",
+    "category": "Content & Creative",
+    "shortDesc": "Design support for everything from social posts to print and packaging.",
+    "whoFor": "Businesses that need consistent, professional design without hiring in-house.",
+    "deliverables": [
+      "Social media templates",
+      "Marketing collateral (flyers, brochures, decks)",
+      "Packaging & print design",
+      "Presentation design",
+      "Brand-consistent asset library"
+    ],
+    "benefits": [
+      "One consistent visual language across channels",
+      "Fast turnaround for recurring requests",
+      "Source files delivered, not just exports",
+      "Scales up or down with your monthly volume"
+    ],
+    "faqService": [
+      {
+        "q": "Do you offer unlimited design requests?",
+        "a": "We offer tiered monthly retainers with a set number of requests/revisions - ask about volume that matches your needs."
+      },
+      {
+        "q": "Can you work from our existing brand guidelines?",
+        "a": "Yes - if you don't have formal guidelines yet, we can also build a lightweight one first."
+      },
+      {
+        "q": "What file formats do we receive?",
+        "a": "Editable source files (Figma/AI/PSD) plus exported, ready-to-use formats for every platform you need."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Graphic Design Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Logo Design Services",
+        "intent": "Deliverable-specific - logo"
+      },
+      {
+        "keyword": "Brand Collateral Design",
+        "intent": "Deliverable-specific - collateral"
+      },
+      {
+        "keyword": "Social Media Graphic Design",
+        "intent": "Channel-specific - social"
+      },
+      {
+        "keyword": "Print Design Services",
+        "intent": "Format-specific - print"
+      },
+      {
+        "keyword": "Packaging Design Agency",
+        "intent": "Deliverable-specific - packaging"
+      },
+      {
+        "keyword": "Presentation Design Services",
+        "intent": "Deliverable-specific - presentations"
+      },
+      {
+        "keyword": "Marketing Graphic Design Services",
+        "intent": "Use-case specific - marketing collateral"
+      },
+      {
+        "keyword": "Freelance Graphic Design Agency",
+        "intent": "Freelance/consultant intent"
+      },
+      {
+        "keyword": "Graphic Design for Startups",
+        "intent": "Audience-specific - startups"
+      }
+    ]
+  },
+  {
+    "slug": "content-writing-copywriting",
+    "name": "Content Writing / Copywriting",
+    "category": "Content & Creative",
+    "shortDesc": "Website, ad and email copy written to convert, not just fill space.",
+    "whoFor": "Businesses whose current copy reads generic or isn't converting visitors.",
+    "deliverables": [
+      "Website & landing page copy",
+      "Ad copy across platforms",
+      "Blog & SEO articles",
+      "Email sequences",
+      "Brand tone-of-voice guide"
+    ],
+    "benefits": [
+      "Copy grounded in your actual customers' language",
+      "SEO and conversion goals built in from the start",
+      "One consistent voice across every channel",
+      "Edited by a human, every time"
+    ],
+    "faqService": [
+      {
+        "q": "Do you write for our specific industry?",
+        "a": "Yes - we research your market and customers before writing anything; we don't reuse generic templates across clients."
+      },
+      {
+        "q": "Is the content SEO-optimized by default?",
+        "a": "Yes for anything meant to rank; we separate SEO-first writing from pure conversion/ad copy since the goals differ."
+      },
+      {
+        "q": "Can you match our existing brand voice?",
+        "a": "We start every engagement by studying your existing copy and building a short tone-of-voice guide before writing anything new."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Content Writing Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Copywriting Services",
+        "intent": "Broader copywriting framing"
+      },
+      {
+        "keyword": "Website Copywriting Agency",
+        "intent": "Deliverable-specific - website copy"
+      },
+      {
+        "keyword": "SEO Content Writing Services",
+        "intent": "Tactic-specific - SEO writing"
+      },
+      {
+        "keyword": "Blog Writing Services",
+        "intent": "Content-type specific - blog"
+      },
+      {
+        "keyword": "Ad Copywriting Agency",
+        "intent": "Deliverable-specific - ad copy"
+      },
+      {
+        "keyword": "Email Copywriting Services",
+        "intent": "Deliverable-specific - email copy"
+      },
+      {
+        "keyword": "Product Description Writing Services",
+        "intent": "Deliverable-specific - product descriptions"
+      },
+      {
+        "keyword": "B2B Content Writing Agency",
+        "intent": "Vertical-specific - B2B"
+      },
+      {
+        "keyword": "Ghostwriting Services for Business",
+        "intent": "Deliverable-specific - ghostwriting"
+      }
+    ]
+  },
+  {
+    "slug": "branding-identity-design",
+    "name": "Branding & Identity Design (logo, brand kit)",
+    "category": "Content & Creative",
+    "shortDesc": "Logo, visual identity and brand guidelines built to look credible from day one.",
+    "whoFor": "New businesses launching, or existing ones outgrowing a DIY logo.",
+    "deliverables": [
+      "Brand discovery & positioning",
+      "Logo design (primary + variations)",
+      "Color palette & typography system",
+      "Brand guidelines document",
+      "Launch-ready asset kit"
+    ],
+    "benefits": [
+      "A brand that looks credible to investors and customers alike",
+      "Guidelines that keep every future designer consistent",
+      "Built to scale as you add products or markets",
+      "Delivered as ready-to-use files, not just concepts"
+    ],
+    "faqService": [
+      {
+        "q": "How long does a full branding project take?",
+        "a": "Typically 3-4 weeks from discovery to final delivery, depending on revision rounds."
+      },
+      {
+        "q": "Do you also design our website once branding is done?",
+        "a": "Yes - branding and website design are commonly bundled since consistency matters most in that handoff."
+      },
+      {
+        "q": "What if we already have a logo we like?",
+        "a": "We can build a full brand system around an existing logo rather than starting from zero."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Branding Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Brand Identity Design Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "Logo & Brand Kit Design",
+        "intent": "Deliverable-specific - logo/kit"
+      },
+      {
+        "keyword": "Rebranding Services",
+        "intent": "Use-case specific - rebrand"
+      },
+      {
+        "keyword": "Brand Strategy Agency",
+        "intent": "Strategy/planning intent"
+      },
+      {
+        "keyword": "Startup Branding Services",
+        "intent": "Audience-specific - startups"
+      },
+      {
+        "keyword": "Visual Identity Design Agency",
+        "intent": "Deliverable-specific - visual identity"
+      },
+      {
+        "keyword": "Brand Guidelines Design Services",
+        "intent": "Deliverable-specific - brand guidelines"
+      },
+      {
+        "keyword": "Personal Branding Agency",
+        "intent": "Audience-specific - individuals"
+      },
+      {
+        "keyword": "Corporate Branding Services",
+        "intent": "Audience-specific - corporate"
+      }
+    ]
+  },
+  {
+    "slug": "short-form-video-content",
+    "name": "Short-form video content (Reels/TikTok/Shorts)",
+    "category": "Content & Creative",
+    "shortDesc": "Reels, TikTok and Shorts content built around what actually earns watch-time.",
+    "whoFor": "Brands wanting consistent short-form presence without an in-house creator.",
+    "deliverables": [
+      "Content pillar & hook strategy",
+      "Filming direction or UGC sourcing",
+      "Editing & captioning",
+      "Trend and audio research",
+      "Monthly content calendar"
+    ],
+    "benefits": [
+      "Built around retention data, not guesswork",
+      "Consistent posting without the daily workload",
+      "UGC-style content that doesn't feel like an ad",
+      "Cross-posted to Reels, TikTok and Shorts from one shoot"
+    ],
+    "faqService": [
+      {
+        "q": "Do we need to appear on camera ourselves?",
+        "a": "Not necessarily - we can work with UGC creators or product-only formats if founder-facing content isn't a fit."
+      },
+      {
+        "q": "How many videos per month is realistic?",
+        "a": "Most brands see traction posting 3-5 times per week; we'll set a realistic cadence based on your resources."
+      },
+      {
+        "q": "Do you handle the actual filming?",
+        "a": "We can direct a local shoot, source UGC creators, or edit footage you already have - whichever fits your setup."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Short-Form Video Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Reels Editing Services",
+        "intent": "Platform-specific - Instagram Reels"
+      },
+      {
+        "keyword": "TikTok Video Content Agency",
+        "intent": "Platform-specific - TikTok"
+      },
+      {
+        "keyword": "YouTube Shorts Production",
+        "intent": "Platform-specific - YouTube Shorts"
+      },
+      {
+        "keyword": "UGC Video Content Services",
+        "intent": "Format-specific - UGC"
+      },
+      {
+        "keyword": "Social Media Reels Agency",
+        "intent": "Broader reels framing"
+      },
+      {
+        "keyword": "Short Video Content Strategy",
+        "intent": "Strategy/planning intent"
+      },
+      {
+        "keyword": "Viral Video Content Services",
+        "intent": "Outcome-specific - virality"
+      },
+      {
+        "keyword": "Short-Form Video Editing for Brands",
+        "intent": "Audience-specific - brands"
+      },
+      {
+        "keyword": "Content Creation for Reels & Shorts",
+        "intent": "Broader content-creation framing"
+      }
+    ]
+  },
+  {
+    "slug": "social-media-management",
+    "name": "Social Media Management (posting, community management)",
+    "category": "Social Media",
+    "shortDesc": "Day-to-day posting, scheduling and community management across your social channels.",
+    "whoFor": "Businesses that know they need consistent social presence but don't have time to run it.",
+    "deliverables": [
+      "Monthly content calendar",
+      "Post scheduling across platforms",
+      "Community management & replies",
+      "Hashtag & caption strategy",
+      "Monthly performance report"
+    ],
+    "benefits": [
+      "Consistent posting without you lifting a finger",
+      "Community replies handled in your brand voice",
+      "Performance tracked against real business goals",
+      "Frees up your time for the parts only you can do"
+    ],
+    "faqService": [
+      {
+        "q": "Which platforms do you manage?",
+        "a": "Instagram, Facebook, LinkedIn, TikTok and X most commonly - we'll recommend which actually matter for your audience."
+      },
+      {
+        "q": "Do you reply to DMs and comments?",
+        "a": "Yes, community management is included; anything requiring sensitive judgment gets flagged to you directly."
+      },
+      {
+        "q": "Who creates the content we post?",
+        "a": "We handle strategy and scheduling; content can be produced by our creative team as an add-on or supplied by you."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Social Media Management Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Social Media Management Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "Instagram Management Agency",
+        "intent": "Platform-specific - Instagram"
+      },
+      {
+        "keyword": "Facebook Page Management Services",
+        "intent": "Platform-specific - Facebook"
+      },
+      {
+        "keyword": "Social Media Community Management",
+        "intent": "Tactic-specific - community management"
+      },
+      {
+        "keyword": "Social Media Content Calendar Services",
+        "intent": "Deliverable-specific - content calendar"
+      },
+      {
+        "keyword": "Small Business Social Media Management",
+        "intent": "Audience-specific - SMB"
+      },
+      {
+        "keyword": "Social Media Management for E-commerce",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "Multi-Platform Social Media Management",
+        "intent": "Use-case specific - multi-platform"
+      },
+      {
+        "keyword": "Social Media Posting Services",
+        "intent": "Tactic-specific - posting only"
+      }
+    ]
+  },
+  {
+    "slug": "social-media-marketing-strategy",
+    "name": "Social Media Marketing/Strategy",
+    "category": "Social Media",
+    "shortDesc": "The strategy layer behind social - positioning, content pillars and growth planning.",
+    "whoFor": "Brands with an active presence that isn't translating into real growth.",
+    "deliverables": [
+      "Audience & competitor research",
+      "Content pillar strategy",
+      "Platform-specific growth plan",
+      "Quarterly strategy review",
+      "KPI tracking dashboard"
+    ],
+    "benefits": [
+      "A plan tied to business goals, not just follower count",
+      "Clarity on which platforms deserve your effort",
+      "Benchmarked against real competitors",
+      "Revisited quarterly as the market shifts"
+    ],
+    "faqService": [
+      {
+        "q": "Is this the same as social media management?",
+        "a": "No - this is the strategy behind it; we often pair it with management, but strategy alone works for teams with in-house posting."
+      },
+      {
+        "q": "How do you measure success beyond followers?",
+        "a": "We track engagement rate, traffic driven to your site, and where relevant, leads or sales attributed to social."
+      },
+      {
+        "q": "How often does strategy get revisited?",
+        "a": "Quarterly by default, with faster check-ins if a platform's algorithm or your market shifts significantly."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Social Media Marketing Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Social Media Strategy Services",
+        "intent": "Strategy/planning intent"
+      },
+      {
+        "keyword": "Social Media Growth Agency",
+        "intent": "Outcome-specific - growth"
+      },
+      {
+        "keyword": "Social Media Marketing for Small Business",
+        "intent": "Audience-specific - SMB"
+      },
+      {
+        "keyword": "Social Media Consulting Services",
+        "intent": "Freelance/consultant intent"
+      },
+      {
+        "keyword": "Organic Social Media Marketing Agency",
+        "intent": "Method-specific - organic only"
+      },
+      {
+        "keyword": "Social Media Audit Services",
+        "intent": "One-off diagnostic service"
+      },
+      {
+        "keyword": "Social Media Marketing Plan Development",
+        "intent": "Deliverable-specific - marketing plan"
+      },
+      {
+        "keyword": "B2B Social Media Marketing Agency",
+        "intent": "Vertical-specific - B2B"
+      },
+      {
+        "keyword": "Social Media Marketing for E-commerce",
+        "intent": "Vertical-specific - online stores"
+      }
+    ]
+  },
+  {
+    "slug": "influencer-collaboration-management",
+    "name": "Influencer Collaboration Management",
+    "category": "Social Media",
+    "shortDesc": "Influencer and creator partnerships managed end-to-end, from outreach to reporting.",
+    "whoFor": "Brands wanting influencer reach without managing dozens of relationships themselves.",
+    "deliverables": [
+      "Creator sourcing & vetting",
+      "Outreach & contract negotiation",
+      "Content briefing & approval",
+      "Payment & deliverable tracking",
+      "Campaign performance report"
+    ],
+    "benefits": [
+      "Vetted creators whose audience actually matches yours",
+      "One point of contact instead of dozens of DMs",
+      "Contracts and usage rights handled properly",
+      "Performance tracked, not just posted-and-forgotten"
+    ],
+    "faqService": [
+      {
+        "q": "How do you find the right creators?",
+        "a": "We vet based on audience overlap and genuine engagement rate, not just follower count, which is often inflated or irrelevant."
+      },
+      {
+        "q": "Do you negotiate rates on our behalf?",
+        "a": "Yes - we handle outreach, negotiation and contracts so you're not doing it creator-by-creator."
+      },
+      {
+        "q": "Can we reuse creator content in our own ads?",
+        "a": "Only with usage rights built into the contract upfront, which we always negotiate for as standard."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Influencer Marketing Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Influencer Outreach Services",
+        "intent": "Tactic-specific - outreach"
+      },
+      {
+        "keyword": "Influencer Campaign Management",
+        "intent": "Ongoing management service angle"
+      },
+      {
+        "keyword": "Micro-Influencer Marketing Services",
+        "intent": "Segment-specific - micro-influencers"
+      },
+      {
+        "keyword": "Influencer Marketing for E-commerce",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "Influencer Partnership Management Agency",
+        "intent": "Relationship-management angle"
+      },
+      {
+        "keyword": "UGC Creator Management Services",
+        "intent": "Format-specific - UGC creators"
+      },
+      {
+        "keyword": "Influencer Marketing Strategy Agency",
+        "intent": "Strategy/planning intent"
+      },
+      {
+        "keyword": "TikTok Influencer Marketing Services",
+        "intent": "Platform-specific - TikTok"
+      },
+      {
+        "keyword": "Instagram Influencer Marketing Agency",
+        "intent": "Platform-specific - Instagram"
+      }
+    ]
+  },
+  {
+    "slug": "lead-generation-campaigns",
+    "name": "Lead Generation Campaigns",
+    "category": "Lead Generation & Conversion",
+    "shortDesc": "Full-funnel campaigns built specifically to generate qualified leads, not just traffic.",
+    "whoFor": "Service businesses and B2B companies that need a steady pipeline of qualified leads.",
+    "deliverables": [
+      "Offer & funnel strategy",
+      "Paid + organic channel mix",
+      "Landing page for lead capture",
+      "Lead qualification & routing setup",
+      "Weekly lead-volume report"
+    ],
+    "benefits": [
+      "Built around lead quality, not just volume",
+      "Leads routed to you in real time",
+      "Tested across multiple channels to find what works",
+      "Clear cost-per-lead tracked from day one"
+    ],
+    "faqService": [
+      {
+        "q": "What counts as a 'qualified' lead?",
+        "a": "We define this together upfront - budget, timeline, and fit criteria - so we're optimizing toward leads worth your sales team's time."
+      },
+      {
+        "q": "Which channels do you use for lead gen?",
+        "a": "Typically a mix of paid ads, landing pages and email follow-up, chosen based on where your specific audience actually is."
+      },
+      {
+        "q": "How fast do leads get to us?",
+        "a": "In real time via CRM integration or instant notification, so follow-up speed doesn't cost you the sale."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Lead Generation Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Lead Generation Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "B2B Lead Generation Agency",
+        "intent": "Vertical-specific - B2B"
+      },
+      {
+        "keyword": "Paid Lead Generation Campaigns",
+        "intent": "Channel-specific - paid"
+      },
+      {
+        "keyword": "Lead Gen for Real Estate",
+        "intent": "Vertical-specific - real estate"
+      },
+      {
+        "keyword": "Lead Generation for Small Business",
+        "intent": "Audience-specific - SMB"
+      },
+      {
+        "keyword": "Appointment Setting Services",
+        "intent": "Deliverable-specific - appointments"
+      },
+      {
+        "keyword": "Lead Nurturing Campaign Services",
+        "intent": "Tactic-specific - nurturing"
+      },
+      {
+        "keyword": "Lead Generation Funnel Agency",
+        "intent": "Deliverable-specific - funnel"
+      },
+      {
+        "keyword": "Local Lead Generation Services",
+        "intent": "Vertical-specific - local"
+      }
+    ]
+  },
+  {
+    "slug": "landing-page-design-cro",
+    "name": "Landing Page Design & CRO (conversion rate optimization)",
+    "category": "Lead Generation & Conversion",
+    "shortDesc": "High-converting landing pages built and tested against your actual conversion data.",
+    "whoFor": "Anyone sending paid or organic traffic to a page that isn't converting well.",
+    "deliverables": [
+      "Conversion-focused landing page design",
+      "Copy aligned to ad messaging",
+      "A/B testing setup",
+      "Heatmap & session recording analysis",
+      "Monthly CRO report"
+    ],
+    "benefits": [
+      "Pages built to convert the specific traffic you're sending",
+      "Testing removes guesswork from design decisions",
+      "Often the highest-ROI fix available",
+      "Improves ROI on ad spend you're already paying for"
+    ],
+    "faqService": [
+      {
+        "q": "How much can CRO actually improve conversion rate?",
+        "a": "It varies widely, but even modest 10-20% lifts compound significantly across your existing traffic and ad spend."
+      },
+      {
+        "q": "Do you need a minimum amount of traffic to test?",
+        "a": "Yes - meaningful A/B tests need enough volume to reach statistical significance; we'll advise if your traffic supports formal testing yet."
+      },
+      {
+        "q": "Can you redesign our existing page or must it be new?",
+        "a": "Either - most engagements start with auditing and improving what exists before considering a full rebuild."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Landing Page Design Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Conversion Rate Optimization Services",
+        "intent": "Broader CRO framing"
+      },
+      {
+        "keyword": "Landing Page Design Services",
+        "intent": "Deliverable-specific - landing pages"
+      },
+      {
+        "keyword": "CRO Audit Services",
+        "intent": "One-off diagnostic service"
+      },
+      {
+        "keyword": "A/B Testing Services",
+        "intent": "Tactic-specific - A/B testing"
+      },
+      {
+        "keyword": "High-Converting Landing Page Design",
+        "intent": "Outcome-specific - conversion"
+      },
+      {
+        "keyword": "Website CRO Consultant",
+        "intent": "Freelance/consultant intent"
+      },
+      {
+        "keyword": "Sales Page Design Services",
+        "intent": "Deliverable-specific - sales pages"
+      },
+      {
+        "keyword": "E-commerce CRO Agency",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "Landing Page Copywriting & Design",
+        "intent": "Combined deliverable - copy+design"
+      }
+    ]
+  },
+  {
+    "slug": "email-marketing-automation",
+    "name": "Email Marketing & Automation (Klaviyo/Mailchimp/HubSpot)",
+    "category": "Lead Generation & Conversion",
+    "shortDesc": "Email flows and campaigns that turn your list into a real revenue channel.",
+    "whoFor": "Businesses with an email list that isn't being used systematically yet.",
+    "deliverables": [
+      "Flow setup (welcome, abandoned cart, post-purchase)",
+      "Segmentation strategy",
+      "Campaign design & copy",
+      "A/B testing of subject lines & sends",
+      "Monthly revenue-attribution report"
+    ],
+    "benefits": [
+      "Automated flows work while you sleep",
+      "Segmentation means fewer, better-targeted emails",
+      "Often your highest-ROI marketing channel",
+      "Built on the platform you already use"
+    ],
+    "faqService": [
+      {
+        "q": "Which email platform do you work with?",
+        "a": "Klaviyo, Mailchimp and HubSpot most commonly - we'll work within your existing platform rather than force a migration."
+      },
+      {
+        "q": "What's the difference between flows and campaigns?",
+        "a": "Flows are automated (triggered by behavior, like an abandoned cart); campaigns are one-off sends like a promotion or newsletter - we build both."
+      },
+      {
+        "q": "How much revenue can email realistically drive?",
+        "a": "For e-commerce specifically, well-built flows alone commonly drive double-digit percentages of total revenue."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Email Marketing Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Email Marketing Automation Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "Klaviyo Agency",
+        "intent": "Platform-specific - Klaviyo"
+      },
+      {
+        "keyword": "Mailchimp Marketing Services",
+        "intent": "Platform-specific - Mailchimp"
+      },
+      {
+        "keyword": "Email Flow Setup Services",
+        "intent": "Deliverable-specific - automated flows"
+      },
+      {
+        "keyword": "E-commerce Email Marketing Agency",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "HubSpot Email Marketing Services",
+        "intent": "Platform-specific - HubSpot"
+      },
+      {
+        "keyword": "Newsletter Management Services",
+        "intent": "Deliverable-specific - newsletters"
+      },
+      {
+        "keyword": "Email Marketing Strategy Consultant",
+        "intent": "Freelance/consultant intent"
+      },
+      {
+        "keyword": "Abandoned Cart Email Services",
+        "intent": "Use-case specific - cart recovery"
+      }
+    ]
+  },
+  {
+    "slug": "sms-marketing",
+    "name": "SMS Marketing",
+    "category": "Lead Generation & Conversion",
+    "shortDesc": "Text message campaigns and automations that reach customers where they already are.",
+    "whoFor": "E-commerce and retail businesses wanting a direct, high-open-rate channel.",
+    "deliverables": [
+      "SMS platform setup & compliance",
+      "Automated flows (cart, shipping, win-back)",
+      "Campaign copywriting",
+      "List growth strategy",
+      "Monthly performance report"
+    ],
+    "benefits": [
+      "Open rates far higher than email",
+      "Direct, immediate channel for time-sensitive offers",
+      "Fully compliant opt-in and opt-out handling",
+      "Works alongside email, not instead of it"
+    ],
+    "faqService": [
+      {
+        "q": "Is SMS marketing legally complicated?",
+        "a": "There are real compliance requirements (consent, opt-out language) which we build in from day one so you're not exposed."
+      },
+      {
+        "q": "How often should we text customers?",
+        "a": "Far less often than email - most successful programs send a few times a month, reserving SMS for genuinely time-sensitive messages."
+      },
+      {
+        "q": "Do you handle list growth too?",
+        "a": "Yes - we set up on-site and post-purchase opt-in flows so your list grows compliantly alongside the campaigns."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "SMS Marketing Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "SMS Marketing Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "E-commerce SMS Marketing",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "SMS Automation Services",
+        "intent": "Tactic-specific - automation"
+      },
+      {
+        "keyword": "Bulk SMS Marketing Services",
+        "intent": "Use-case specific - bulk campaigns"
+      },
+      {
+        "keyword": "SMS Marketing for Retail",
+        "intent": "Vertical-specific - retail"
+      },
+      {
+        "keyword": "Text Message Marketing Agency",
+        "intent": "Broader phrasing variant"
+      },
+      {
+        "keyword": "SMS + Email Marketing Combo Services",
+        "intent": "Combined-channel angle"
+      },
+      {
+        "keyword": "SMS Marketing Compliance Services",
+        "intent": "Tactic-specific - compliance"
+      },
+      {
+        "keyword": "Promotional SMS Campaign Services",
+        "intent": "Use-case specific - promotions"
+      }
+    ]
+  },
+  {
+    "slug": "website-design",
+    "name": "Website Design (WordPress, Webflow, Shopify)",
+    "category": "Web & App Development",
+    "shortDesc": "Fast, conversion-focused websites built on WordPress, Webflow or Shopify.",
+    "whoFor": "Businesses needing a new site or a redesign that doesn't fall over under real traffic.",
+    "deliverables": [
+      "UX wireframing & sitemap",
+      "Custom design (not generic templates)",
+      "Development & CMS setup",
+      "Speed & mobile optimization",
+      "Launch support & training"
+    ],
+    "benefits": [
+      "Built on the platform that fits your actual needs",
+      "Fast load times built in, not bolted on after",
+      "You retain full ownership and access",
+      "Trained to manage content yourself after launch"
+    ],
+    "faqService": [
+      {
+        "q": "Which platform is right for us - WordPress, Webflow or Shopify?",
+        "a": "It depends on whether you need e-commerce (Shopify), content flexibility (WordPress), or design-first marketing sites (Webflow) - we'll recommend based on your actual needs."
+      },
+      {
+        "q": "How long does a full website take?",
+        "a": "Typically 4-8 weeks depending on page count and complexity."
+      },
+      {
+        "q": "Can we update the site ourselves after launch?",
+        "a": "Yes - we build with a CMS and provide training so you're not dependent on us for every text change."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Website Design Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "WordPress Website Design Services",
+        "intent": "Platform-specific - WordPress"
+      },
+      {
+        "keyword": "Webflow Design Agency",
+        "intent": "Platform-specific - Webflow"
+      },
+      {
+        "keyword": "Shopify Website Design Services",
+        "intent": "Platform-specific - Shopify"
+      },
+      {
+        "keyword": "Website Redesign Services",
+        "intent": "Use-case specific - redesign"
+      },
+      {
+        "keyword": "Small Business Website Design",
+        "intent": "Audience-specific - SMB"
+      },
+      {
+        "keyword": "Custom Website Design Agency",
+        "intent": "Method-specific - custom build"
+      },
+      {
+        "keyword": "Responsive Web Design Services",
+        "intent": "Tactic-specific - responsive design"
+      },
+      {
+        "keyword": "Website Design for Startups",
+        "intent": "Audience-specific - startups"
+      },
+      {
+        "keyword": "Landing Page & Website Design Services",
+        "intent": "Combined deliverable angle"
+      }
+    ]
+  },
+  {
+    "slug": "saas-development",
+    "name": "SaaS Development",
+    "category": "Web & App Development",
+    "shortDesc": "Full-stack SaaS product development from MVP through to scale.",
+    "whoFor": "Founders and companies building a software product, not just a marketing site.",
+    "deliverables": [
+      "Product discovery & scoping",
+      "UI/UX design",
+      "Full-stack development",
+      "QA & testing",
+      "Post-launch support & iteration"
+    ],
+    "benefits": [
+      "MVP-first approach to validate before overbuilding",
+      "Built on modern, maintainable tech stacks",
+      "Transparent sprint-based delivery",
+      "Support doesn't end at launch"
+    ],
+    "faqService": [
+      {
+        "q": "Do you build from scratch or use existing frameworks?",
+        "a": "We use proven modern frameworks rather than reinventing infrastructure - this keeps cost and timeline realistic."
+      },
+      {
+        "q": "How long does an MVP take?",
+        "a": "Most MVPs take 8-14 weeks depending on scope, prioritizing the smallest version that proves your core value."
+      },
+      {
+        "q": "Who owns the code once it's built?",
+        "a": "You do, fully - we hand over complete source code and documentation."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "SaaS Development Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "SaaS Product Development Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "MVP Development for Startups",
+        "intent": "Use-case specific - MVP"
+      },
+      {
+        "keyword": "SaaS Application Development",
+        "intent": "Broader phrasing variant"
+      },
+      {
+        "keyword": "Custom SaaS Development Services",
+        "intent": "Method-specific - custom build"
+      },
+      {
+        "keyword": "SaaS UI/UX Design & Development",
+        "intent": "Combined deliverable - design+dev"
+      },
+      {
+        "keyword": "B2B SaaS Development Agency",
+        "intent": "Vertical-specific - B2B"
+      },
+      {
+        "keyword": "SaaS Platform Development Company",
+        "intent": "Broader phrasing variant"
+      },
+      {
+        "keyword": "SaaS Development for Startups",
+        "intent": "Audience-specific - startups"
+      },
+      {
+        "keyword": "Full-Stack SaaS Development Services",
+        "intent": "Method-specific - full-stack"
+      }
+    ]
+  },
+  {
+    "slug": "app-development",
+    "name": "App Development (mobile)",
+    "category": "Web & App Development",
+    "shortDesc": "iOS, Android and cross-platform mobile app development.",
+    "whoFor": "Businesses needing a mobile app for customers, staff, or a product idea.",
+    "deliverables": [
+      "Product scoping & wireframes",
+      "UI/UX design",
+      "iOS / Android / cross-platform development",
+      "App store submission support",
+      "Post-launch maintenance"
+    ],
+    "benefits": [
+      "Cross-platform builds save cost without sacrificing quality",
+      "Designed for real app-store approval, not just demos",
+      "Built with maintenance in mind, not thrown over the wall",
+      "Clear milestone-based delivery"
+    ],
+    "faqService": [
+      {
+        "q": "Should we build native or cross-platform?",
+        "a": "Cross-platform (e.g. React Native) covers most use cases at lower cost; native makes sense mainly for performance-heavy or hardware-specific apps."
+      },
+      {
+        "q": "How long does app store approval take?",
+        "a": "Typically 1-2 weeks for Apple, faster for Android, though this varies and first submissions sometimes need revisions."
+      },
+      {
+        "q": "What happens after launch?",
+        "a": "We offer ongoing maintenance plans for updates, OS compatibility and bug fixes - apps need upkeep, not just a launch."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Mobile App Development Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "iOS App Development Services",
+        "intent": "Platform-specific - iOS"
+      },
+      {
+        "keyword": "Android App Development Services",
+        "intent": "Platform-specific - Android"
+      },
+      {
+        "keyword": "Cross-Platform App Development",
+        "intent": "Method-specific - cross-platform"
+      },
+      {
+        "keyword": "App Development for Startups",
+        "intent": "Audience-specific - startups"
+      },
+      {
+        "keyword": "Custom Mobile App Development",
+        "intent": "Method-specific - custom build"
+      },
+      {
+        "keyword": "On-Demand App Development Services",
+        "intent": "Vertical-specific - on-demand apps"
+      },
+      {
+        "keyword": "App UI/UX Design & Development",
+        "intent": "Combined deliverable - design+dev"
+      },
+      {
+        "keyword": "React Native App Development Agency",
+        "intent": "Tech-specific - React Native"
+      },
+      {
+        "keyword": "E-commerce App Development Services",
+        "intent": "Vertical-specific - online stores"
+      }
+    ]
+  },
+  {
+    "slug": "e-commerce-store-setup-management",
+    "name": "E-commerce Store Setup & Management",
+    "category": "Web & App Development",
+    "shortDesc": "Online store builds and ongoing management on Shopify or WooCommerce.",
+    "whoFor": "Businesses launching or migrating an online store.",
+    "deliverables": [
+      "Store setup & theme customization",
+      "Payment & shipping configuration",
+      "Product catalog setup",
+      "App/plugin integration",
+      "Ongoing maintenance & updates"
+    ],
+    "benefits": [
+      "Store built to convert from day one",
+      "No dependency on us for routine updates",
+      "Payment and shipping configured correctly the first time",
+      "Scales as your product catalog grows"
+    ],
+    "faqService": [
+      {
+        "q": "Shopify or WooCommerce - which is right for us?",
+        "a": "Shopify suits most businesses wanting speed and reliability with less technical overhead; WooCommerce suits those wanting deeper WordPress-based customization."
+      },
+      {
+        "q": "Can you migrate our existing store?",
+        "a": "Yes - we handle product, customer and order data migration with minimal downtime."
+      },
+      {
+        "q": "Do you handle ongoing maintenance after launch?",
+        "a": "Yes, as an optional monthly plan covering updates, security and small changes."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "E-commerce Website Development Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Shopify Store Setup Services",
+        "intent": "Platform-specific - Shopify"
+      },
+      {
+        "keyword": "E-commerce Store Management Services",
+        "intent": "Ongoing management service angle"
+      },
+      {
+        "keyword": "WooCommerce Development Services",
+        "intent": "Platform-specific - WooCommerce"
+      },
+      {
+        "keyword": "Online Store Setup for Startups",
+        "intent": "Audience-specific - startups"
+      },
+      {
+        "keyword": "E-commerce Store Redesign Services",
+        "intent": "Use-case specific - redesign"
+      },
+      {
+        "keyword": "Multi-Vendor Marketplace Development",
+        "intent": "Use-case specific - marketplace"
+      },
+      {
+        "keyword": "E-commerce Store Migration Services",
+        "intent": "Use-case specific - migration"
+      },
+      {
+        "keyword": "Shopify Plus Development Agency",
+        "intent": "Platform-specific - Shopify Plus"
+      },
+      {
+        "keyword": "E-commerce Store Maintenance Services",
+        "intent": "Tactic-specific - ongoing maintenance"
+      }
+    ]
+  },
+  {
+    "slug": "crm-erp-development-setup",
+    "name": "CRM & ERP Development/Setup",
+    "category": "Business Systems",
+    "shortDesc": "CRM and ERP systems set up and customized around how your team actually works.",
+    "whoFor": "Growing businesses managing customers or operations through spreadsheets or disconnected tools.",
+    "deliverables": [
+      "Needs assessment & platform selection",
+      "Custom field & workflow configuration",
+      "Data migration from existing tools",
+      "Team training",
+      "Ongoing support & optimization"
+    ],
+    "benefits": [
+      "Built around your actual sales/ops process",
+      "Removes duplicate data entry across tools",
+      "Reduces dropped leads and manual errors",
+      "Scales with your team, not against it"
+    ],
+    "faqService": [
+      {
+        "q": "Which CRM should we choose?",
+        "a": "It depends on team size, budget and sales complexity - we assess this before recommending HubSpot, Salesforce or an alternative."
+      },
+      {
+        "q": "Can you migrate our data from spreadsheets?",
+        "a": "Yes - data migration and cleanup from spreadsheets or legacy systems is a standard part of setup."
+      },
+      {
+        "q": "Do you provide training for our team?",
+        "a": "Yes, hands-on training is included so adoption doesn't stall after handoff."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "CRM Development Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "ERP Development Services",
+        "intent": "Broader ERP framing"
+      },
+      {
+        "keyword": "CRM Setup & Customization Services",
+        "intent": "Deliverable-specific - setup/custom"
+      },
+      {
+        "keyword": "Custom CRM Development",
+        "intent": "Method-specific - custom build"
+      },
+      {
+        "keyword": "HubSpot CRM Setup Services",
+        "intent": "Platform-specific - HubSpot"
+      },
+      {
+        "keyword": "Salesforce Implementation Services",
+        "intent": "Platform-specific - Salesforce"
+      },
+      {
+        "keyword": "ERP Integration Services",
+        "intent": "Tactic-specific - integration"
+      },
+      {
+        "keyword": "CRM for Small Business Services",
+        "intent": "Audience-specific - SMB"
+      },
+      {
+        "keyword": "ERP Software Development Company",
+        "intent": "Broader phrasing variant"
+      },
+      {
+        "keyword": "CRM Migration Services",
+        "intent": "Use-case specific - migration"
+      }
+    ]
+  },
+  {
+    "slug": "marketing-automation-workflows",
+    "name": "Marketing Automation Workflows",
+    "category": "Business Systems",
+    "shortDesc": "Automated workflows connecting your CRM, email, and ad platforms so leads don't fall through gaps.",
+    "whoFor": "Teams manually doing follow-up tasks that could run themselves.",
+    "deliverables": [
+      "Workflow mapping across tools",
+      "Lead scoring setup",
+      "CRM-to-email/SMS integration",
+      "Trigger-based automation build",
+      "Monthly workflow performance review"
+    ],
+    "benefits": [
+      "Leads followed up with instantly, every time",
+      "Fewer manual tasks for your team",
+      "Consistent follow-up regardless of who's on holiday",
+      "Built on the tools you already use"
+    ],
+    "faqService": [
+      {
+        "q": "What's the difference between this and email automation?",
+        "a": "Email automation is one piece; this connects your CRM, ads and multiple channels into one coordinated system."
+      },
+      {
+        "q": "Do we need a certain size team to benefit?",
+        "a": "No - even solo founders benefit since it removes manual follow-up tasks that otherwise get missed."
+      },
+      {
+        "q": "How long does setup take?",
+        "a": "Typically 2-4 weeks depending on how many tools need to be connected."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Marketing Automation Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Marketing Automation Setup Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "HubSpot Automation Services",
+        "intent": "Platform-specific - HubSpot"
+      },
+      {
+        "keyword": "Workflow Automation for Marketing",
+        "intent": "Broader phrasing variant"
+      },
+      {
+        "keyword": "Lead Scoring Automation Services",
+        "intent": "Tactic-specific - lead scoring"
+      },
+      {
+        "keyword": "Marketing Automation Consultant",
+        "intent": "Freelance/consultant intent"
+      },
+      {
+        "keyword": "CRM Marketing Automation Integration",
+        "intent": "Combined deliverable - CRM+automation"
+      },
+      {
+        "keyword": "E-commerce Marketing Automation Services",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "Email & SMS Automation Workflows",
+        "intent": "Combined-channel angle"
+      },
+      {
+        "keyword": "Marketing Automation Audit Services",
+        "intent": "One-off diagnostic service"
+      }
+    ]
+  },
+  {
+    "slug": "analytics-reporting-dashboards",
+    "name": "Analytics & Reporting Dashboards (GA4, custom dashboards)",
+    "category": "Business Systems",
+    "shortDesc": "GA4 setup and custom dashboards that show what's actually driving results.",
+    "whoFor": "Businesses making decisions without clear visibility into what's working.",
+    "deliverables": [
+      "GA4 setup & event tracking",
+      "Custom dashboard build (Looker Studio or similar)",
+      "Cross-channel attribution setup",
+      "Monthly reporting cadence",
+      "Ad-hoc analysis on request"
+    ],
+    "benefits": [
+      "One dashboard instead of five disconnected logins",
+      "Decisions based on data, not guesswork",
+      "Attribution across channels, not just last-click",
+      "Built once, updates automatically after"
+    ],
+    "faqService": [
+      {
+        "q": "Do we need GA4 if we already have Shopify/platform analytics?",
+        "a": "Platform analytics are useful but limited to that platform; GA4 gives a full-site, cross-channel view that platform tools can't."
+      },
+      {
+        "q": "Can you build a dashboard from data we already have?",
+        "a": "Yes - we can connect existing data sources into one unified, easy-to-read dashboard."
+      },
+      {
+        "q": "How often is the dashboard updated?",
+        "a": "Most dashboards refresh automatically in real time or daily, depending on the data source."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Marketing Analytics Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "GA4 Setup Services",
+        "intent": "Platform-specific - GA4"
+      },
+      {
+        "keyword": "Custom Reporting Dashboard Development",
+        "intent": "Deliverable-specific - custom dashboards"
+      },
+      {
+        "keyword": "Marketing Dashboard Agency",
+        "intent": "Broader phrasing variant"
+      },
+      {
+        "keyword": "Data Analytics Consulting Services",
+        "intent": "Freelance/consultant intent"
+      },
+      {
+        "keyword": "Google Analytics Consultant",
+        "intent": "Platform-specific - Google Analytics"
+      },
+      {
+        "keyword": "Business Intelligence Dashboard Services",
+        "intent": "Broader BI framing"
+      },
+      {
+        "keyword": "Marketing Attribution Reporting Services",
+        "intent": "Tactic-specific - attribution"
+      },
+      {
+        "keyword": "Looker Studio Dashboard Services",
+        "intent": "Platform-specific - Looker Studio"
+      },
+      {
+        "keyword": "Performance Reporting Automation Services",
+        "intent": "Tactic-specific - automated reporting"
+      }
+    ]
+  },
+  {
+    "slug": "chatbot-ai-customer-support-integration",
+    "name": "Chatbot / AI Customer Support Integration",
+    "category": "Business Systems",
+    "shortDesc": "AI chatbots that handle common questions instantly across your site and WhatsApp.",
+    "whoFor": "Businesses fielding the same customer questions repeatedly across channels.",
+    "deliverables": [
+      "Conversation flow design",
+      "Website / WhatsApp / Messenger integration",
+      "FAQ & knowledge base setup",
+      "Human handoff configuration",
+      "Monthly conversation analytics"
+    ],
+    "benefits": [
+      "Instant answers outside business hours",
+      "Frees your team from repetitive questions",
+      "Seamless handoff to a human when needed",
+      "Learns from real conversation data over time"
+    ],
+    "faqService": [
+      {
+        "q": "Will the chatbot replace our support team?",
+        "a": "No - it's designed to handle repetitive questions instantly and hand off anything complex to a real person."
+      },
+      {
+        "q": "Which channels can it work on?",
+        "a": "Website chat widgets, WhatsApp and Facebook Messenger are the most common integrations we set up."
+      },
+      {
+        "q": "How smart is the chatbot really?",
+        "a": "It's built on your actual FAQs and knowledge base, so accuracy depends on how well that's documented upfront - which we help build out."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Chatbot Development Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "AI Customer Support Integration Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "WhatsApp Chatbot Development",
+        "intent": "Platform-specific - WhatsApp"
+      },
+      {
+        "keyword": "Website Chatbot Setup Services",
+        "intent": "Platform-specific - website widget"
+      },
+      {
+        "keyword": "AI Chatbot for E-commerce",
+        "intent": "Vertical-specific - online stores"
+      },
+      {
+        "keyword": "Customer Support Automation Services",
+        "intent": "Broader automation framing"
+      },
+      {
+        "keyword": "AI Live Chat Integration Services",
+        "intent": "Deliverable-specific - live chat"
+      },
+      {
+        "keyword": "Chatbot Development for Small Business",
+        "intent": "Audience-specific - SMB"
+      },
+      {
+        "keyword": "Conversational AI Agency",
+        "intent": "Broader phrasing variant"
+      },
+      {
+        "keyword": "Facebook Messenger Chatbot Services",
+        "intent": "Platform-specific - Messenger"
+      }
+    ]
+  },
+  {
+    "slug": "e-commerce-marketing",
+    "name": "E-commerce Marketing (Meta/Google Shopping)",
+    "category": "E-commerce Specific",
+    "shortDesc": "Shopping ads and full-funnel marketing built specifically for online stores.",
+    "whoFor": "Online stores needing ads and marketing beyond generic social posting.",
+    "deliverables": [
+      "Product feed setup & optimization",
+      "Google Shopping & Meta Shopping ads",
+      "Retargeting for cart abandoners",
+      "Seasonal campaign planning",
+      "Weekly ROAS reporting"
+    ],
+    "benefits": [
+      "Ads built around your actual product catalog",
+      "Optimized toward ROAS, not just traffic",
+      "Coordinated across every shopping-ad platform",
+      "Seasonal planning built in, not an afterthought"
+    ],
+    "faqService": [
+      {
+        "q": "What's a good ROAS target for e-commerce?",
+        "a": "It depends heavily on your margins - we calculate your specific breakeven ROAS before setting any targets."
+      },
+      {
+        "q": "Do you optimize our product feed too?",
+        "a": "Yes - feed quality often matters more than the ad settings themselves for Shopping campaigns."
+      },
+      {
+        "q": "How do you handle seasonal spikes like holidays?",
+        "a": "We build a seasonal calendar in advance so budget and creative are ready before demand spikes, not scrambling during them."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "E-commerce Marketing Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Google Shopping Ads Management",
+        "intent": "Platform-specific - Google Shopping"
+      },
+      {
+        "keyword": "Meta Shopping Ads Services",
+        "intent": "Platform-specific - Meta Shopping"
+      },
+      {
+        "keyword": "E-commerce PPC Agency",
+        "intent": "Broader PPC framing"
+      },
+      {
+        "keyword": "Product Feed Optimization Services",
+        "intent": "Tactic-specific - product feed"
+      },
+      {
+        "keyword": "E-commerce Ads Management Services",
+        "intent": "Service-package framing"
+      },
+      {
+        "keyword": "Shopify Marketing Agency",
+        "intent": "Platform-specific - Shopify"
+      },
+      {
+        "keyword": "E-commerce Growth Marketing Agency",
+        "intent": "Outcome-specific - growth"
+      },
+      {
+        "keyword": "Google Merchant Center Setup Services",
+        "intent": "Deliverable-specific - Merchant Center"
+      },
+      {
+        "keyword": "E-commerce Retargeting Ads Services",
+        "intent": "Tactic-specific - retargeting"
+      }
+    ]
+  },
+  {
+    "slug": "marketplace-management",
+    "name": "Marketplace Management (Amazon, Etsy)",
+    "category": "E-commerce Specific",
+    "shortDesc": "Amazon and Etsy storefronts managed for visibility, PPC and sales.",
+    "whoFor": "Sellers on Amazon or Etsy not getting the visibility their products deserve.",
+    "deliverables": [
+      "Listing optimization (titles, images, copy)",
+      "Marketplace PPC management",
+      "Review & rating strategy",
+      "Inventory & pricing monitoring",
+      "Monthly sales & ranking report"
+    ],
+    "benefits": [
+      "Listings built to rank inside marketplace search, not Google",
+      "PPC spend optimized toward actual profit, not just sales",
+      "Frees you from daily marketplace admin",
+      "Applies to Amazon, Etsy or both together"
+    ],
+    "faqService": [
+      {
+        "q": "Do you manage our whole Amazon account or just ads?",
+        "a": "We can do either - full account management or PPC-only, depending on what you need."
+      },
+      {
+        "q": "What's Amazon Brand Registry and do we need it?",
+        "a": "It's a program that protects your listings from hijacking and unlocks better tools - if you have a registered trademark, we'll usually recommend it."
+      },
+      {
+        "q": "Can you manage Amazon and Etsy together?",
+        "a": "Yes - many sellers run both, and we coordinate inventory and messaging across each rather than treating them separately."
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "Amazon Marketplace Management Agency",
+        "intent": "Brand/agency search - generic overview"
+      },
+      {
+        "keyword": "Amazon PPC Management Services",
+        "intent": "Tactic-specific - Amazon PPC"
+      },
+      {
+        "keyword": "Etsy Store Management Services",
+        "intent": "Platform-specific - Etsy"
+      },
+      {
+        "keyword": "Amazon Listing Optimization Services",
+        "intent": "Tactic-specific - listing optimization"
+      },
+      {
+        "keyword": "Amazon Seller Account Management",
+        "intent": "Ongoing management service angle"
+      },
+      {
+        "keyword": "Etsy SEO Services",
+        "intent": "Tactic-specific - Etsy SEO"
+      },
+      {
+        "keyword": "Amazon Brand Registry Services",
+        "intent": "Deliverable-specific - brand registry"
+      },
+      {
+        "keyword": "Marketplace Growth Agency",
+        "intent": "Outcome-specific - growth"
+      },
+      {
+        "keyword": "Amazon FBA Management Services",
+        "intent": "Tactic-specific - FBA"
+      },
+      {
+        "keyword": "Multi-Marketplace Management Services",
+        "intent": "Use-case specific - multi-marketplace"
+      }
+    ]
+  }
+]

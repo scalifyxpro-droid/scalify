@@ -1,0 +1,84 @@
+---
+import servicesData from "../data/services.json";
+
+interface Props {
+  // "city": strict mode - links ONLY to this city's own service pages, no other city/country ever appears.
+  // "global": default footer used on homepage / service pillar / country hub pages.
+  mode?: "global" | "city";
+  city?: string;
+  citySlug?: string;
+  countrySlug?: string;
+  country?: string;
+}
+const { mode = "global", city, citySlug, countrySlug, country } = Astro.props as Props;
+---
+<footer class="footer">
+  <div class="wrap footer-inner">
+    {mode === "city" && citySlug && countrySlug ? (
+      <>
+        <div class="footer-col">
+          <div class="footer-heading serif">Scalify - A Digital Marketing Company</div>
+          <p class="footer-tagline">Your dedicated performance marketing & SEO partner in {city}, {country}. Invoicing available in local currency or USD.</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-label">Our services in {city}</div>
+          <ul class="footer-list">
+            {servicesData.slice(0, 16).map((s: any) => (
+              <li><a href={`/${countrySlug}/${citySlug}/${s.slug}`}>{s.name} in {city}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-label">More services in {city}</div>
+          <ul class="footer-list">
+            {servicesData.slice(16).map((s: any) => (
+              <li><a href={`/${countrySlug}/${citySlug}/${s.slug}`}>{s.name} in {city}</a></li>
+            ))}
+          </ul>
+        </div>
+      </>
+    ) : (
+      <>
+        <div class="footer-col">
+          <div class="footer-heading serif">Scalify - A Digital Marketing Company</div>
+          <p class="footer-tagline">A full-service performance marketing and programmatic SEO company, scaling ambitious businesses across 50 countries and 500 cities.</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-label">Services</div>
+          <ul class="footer-list">
+            {servicesData.slice(0, 10).map((s: any) => (
+              <li><a href={`/services/${s.slug}`}>{s.name}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-label">Company & Locations</div>
+          <ul class="footer-list">
+            <li><a href="/services">All 31 Services</a></li>
+            <li><a href="/countries">All 50 Countries</a></li>
+            <li><a href="/#contact">Direct WhatsApp Strategy</a></li>
+          </ul>
+        </div>
+      </>
+    )}
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; {new Date().getFullYear()} Scalify - A Digital Marketing Company. All rights reserved.</span>
+  </div>
+</footer>
+
+<style>
+  .footer { border-top: 1px solid #e2ddd0; padding-top: 56px; margin-top: 60px; background: #fbfaf7; }
+  .footer-inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
+  .footer-heading { font-size: 19px; font-weight: 600; margin-bottom: 12px; color: #1c1c1a; }
+  .footer-tagline { font-size: 14px; color: #57524a; line-height: 1.6; max-width: 340px; }
+  .footer-label { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: #8a8375; text-transform: uppercase; margin-bottom: 14px; }
+  .footer-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .footer-list a { font-size: 14px; text-decoration: none; color: #3a3833; transition: color 0.15s ease; }
+  .footer-list a:hover { color: #1c1c1a; text-decoration: underline; }
+  .footer-bottom { border-top: 1px solid #e2ddd0; padding: 22px 32px; font-size: 13px; color: #8a8375; display: flex; justify-content: space-between; align-items: center; }
+  @media (max-width: 800px) {
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { padding: 20px 20px; }
+  }
+</style>

@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import citiesData from "../../data/cities.json";
+
+const countryMap = new Map();
+for (const c of citiesData) {
+  if (!countryMap.has(c.countrySlug)) {
+    countryMap.set(c.countrySlug, {
+      country: c.country,
+      countrySlug: c.countrySlug,
+      tier: c.tier,
+      currency: c.currency,
+      count: 0
+    });
+  }
+  countryMap.get(c.countrySlug).count++;
+}
+const countries = [...countryMap.values()].sort((a, b) => a.country.localeCompare(b.country));
+---
+<BaseLayout
+  title="All Global Markets & Countries | Scalify - A Digital Marketing Company"
+  description="Scalify delivers dedicated performance marketing, paid advertising, and programmatic SEO across 50 countries and 500+ commercial city hubs."
+  canonical="https://scalify.com/countries"
+>
+  <Nav />
+  <main class="wrap page-container">
+    <header class="page-head">
+      <div class="badge-pill">
+        <span class="pill-dot"></span>
+        <span>GLOBAL COVERAGE • 50 MARKETS</span>
+      </div>
+      <h1 class="serif page-title">Global Markets & Operational Hubs</h1>
+      <p class="lede">Scalify - A Digital Marketing Company manages localized customer acquisition across 50 countries and 500+ cities. Select your region below to inspect city-level SEO and performance marketing capabilities.</p>
+    </header>
+
+    <div class="grid">
+      {countries.map((c) => (
+        <a class="country-card" href={`/countries/${c.countrySlug}`}>
+          <div class="card-head">
+            <span class="card-name">{c.country}</span>
+            <span class="card-tier">{c.tier}</span>
+          </div>
+          <div class="card-meta">
+            <span>{c.count} Target Cities</span> • <span>{c.currency}</span>
+          </div>
+          <div class="card-link">Explore Market →</div>
+        </a>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-container { padding: 48px 32px 80px; }
+  .page-head { margin-bottom: 44px; max-width: 760px; }
+  .badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #eae5d9;
+    color: #4a453c;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .pill-dot { width: 6px; height: 6px; background: #25d366; border-radius: 50%; }
+  .page-title { font-size: 44px; font-weight: 500; margin: 0 0 16px; color: #1c1c1a; }
+  .lede { font-size: 17.5px; line-height: 1.65; color: #57524a; margin: 0; }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .country-card {
+    background: #fff;
+    border: 1px solid #e2ddd0;
+    border-radius: 14px;
+    padding: 22px;
+    text-decoration: none;
+    color: #1c1c1a;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .country-card:hover {
+    border-color: #1c1c1a;
+    transform: translateY(-2px);
+  }
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-name { font-size: 16px; font-weight: 600; }
+  .card-tier {
+    font-size: 11px;
+    background: #f0ebe0;
+    color: #57524a;
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  .card-meta { font-size: 13px; color: #8a8375; }
+  .card-link { font-size: 13px; font-weight: 600; color: #1c1c1a; margin-top: 6px; }
+
+  @media (max-width: 1024px) {
+    .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (max-width: 768px) {
+    .page-container { padding: 32px 20px 60px; }
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .page-title { font-size: 32px; }
+  }
+  @media (max-width: 480px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>

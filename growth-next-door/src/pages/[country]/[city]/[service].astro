@@ -1,0 +1,720 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Nav from "../../../components/Nav.astro";
+import Footer from "../../../components/Footer.astro";
+import WhatsAppForm from "../../../components/WhatsAppForm.astro";
+import servicesData from "../../../data/services.json";
+import citiesData from "../../../data/cities.json";
+import { generateComprehensiveCityContent } from "../../../lib/content.js";
+
+export function getStaticPaths() {
+  const paths = [];
+  for (const city of citiesData) {
+    for (const service of servicesData) {
+      paths.push({
+        params: { country: city.countrySlug, city: city.citySlug, service: service.slug },
+        props: { city, service },
+      });
+    }
+  }
+  return paths;
+}
+
+const { city, service } = Astro.props;
+const data = generateComprehensiveCityContent(service, city);
+const canonical = `https://scalify.com/${city.countrySlug}/${city.citySlug}/${service.slug}`;
+
+// Schema Structured Data
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": data.sec10.faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": `Scalify - ${data.kwCity}`,
+  "description": data.meta.description,
+  "url": canonical,
+  "telephone": "+916353583148",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": city.city,
+    "addressCountry": city.country
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": city.city
+  }
+};
+---
+<BaseLayout title={data.meta.title} description={data.meta.description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  
+  <Nav />
+
+  <main class="wrap page-container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <a href="/countries">Countries</a>
+      <span class="sep">/</span>
+      <a href={`/countries/${city.countrySlug}`}>{city.country}</a>
+      <span class="sep">/</span>
+      <span class="active">{city.city}</span>
+      <span class="sep">/</span>
+      <span class="active">{service.name}</span>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <div class="hero-text">
+        <div class="badge-pill">
+          <span class="pill-dot"></span>
+          <span>{service.category.toUpperCase()} • {city.city.toUpperCase()}, {city.country.toUpperCase()}</span>
+        </div>
+        <h1 class="serif hero-title">{data.kwCity}</h1>
+        <p class="hero-lede">{service.shortDesc} Strategic growth architecture engineered for modern brands in {city.city}. Invoicing available in {city.currency} or USD.</p>
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <span class="stat-val">{city.tier}</span>
+            <span class="stat-lbl">Market Tier</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">{city.competition}</span>
+            <span class="stat-lbl">Competition</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">{city.currency}</span>
+            <span class="stat-lbl">Billing Currency</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">Same-Day</span>
+            <span class="stat-lbl">WhatsApp SLA</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-form-wrapper" id="consultation">
+        <WhatsAppForm preselectedService={service.name} cityLabel={`${city.city}, ${city.country}`} formId="city-hero-form" />
+      </div>
+    </header>
+
+    <!-- Section 1: Executive Overview -->
+    <section class="content-block">
+      <h2 class="serif section-heading">{data.sec1.title}</h2>
+      {data.sec1.paragraphs.map(p => <p class="prose">{p}</p>)}
+    </section>
+
+    <!-- Section 2: Market Dynamics & Local Intelligence -->
+    <section class="content-block highlighted-box">
+      <h2 class="serif section-heading">{data.sec2.title}</h2>
+      {data.sec2.paragraphs.map(p => <p class="prose">{p}</p>)}
+    </section>
+
+    <!-- Section 3: Detailed Deliverables Scope -->
+    <section class="content-block">
+      <h2 class="serif section-heading">{data.sec3.title}</h2>
+      <p class="prose">{data.sec3.intro}</p>
+      <div class="deliverables-grid">
+        {data.sec3.deliverables.map((item, idx) => (
+          <div class="deliverable-card">
+            <div class="card-num">0{idx + 1}</div>
+            <h3 class="serif card-title">{item.title}</h3>
+            <p class="card-desc">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section 4: 6-Stage Execution Framework -->
+    <section class="content-block">
+      <h2 class="serif section-heading">{data.sec4.title}</h2>
+      <div class="timeline-container">
+        {data.sec4.phases.map(item => (
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3 class="serif timeline-title">{item.phase}</h3>
+              <p class="prose">{item.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section 5: Comparative Market Analysis -->
+    <section class="content-block">
+      <h2 class="serif section-heading">{data.sec5.title}</h2>
+      {data.sec5.paragraphs.map(p => <p class="prose">{p}</p>)}
+      <div class="table-responsive">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Strategic Capability</th>
+              <th class="highlight-col">Scalify Execution</th>
+              <th>Legacy Agencies</th>
+              <th>Freelance Contractors</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.sec5.comparisonTable.map(row => (
+              <tr>
+                <td><strong>{row.feature}</strong></td>
+                <td class="highlight-col"><span class="badge-check">✓</span> {row.scalify}</td>
+                <td>{row.legacy}</td>
+                <td>{row.freelancers}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 6: Unit Economics & Budgeting in Local Currency -->
+    <section class="content-block highlighted-box">
+      <h2 class="serif section-heading">{data.sec6.title}</h2>
+      {data.sec6.paragraphs.map(p => <p class="prose">{p}</p>)}
+    </section>
+
+    <!-- Section 7: Sector Playbooks -->
+    <section class="content-block">
+      <h2 class="serif section-heading">{data.sec7.title}</h2>
+      <div class="playbooks-grid">
+        {data.sec7.playbooks.map(pb => (
+          <div class="playbook-card">
+            <h3 class="serif playbook-title">{pb.sector}</h3>
+            <p class="prose">{pb.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section 8: Technology Infrastructure & Attribution -->
+    <section class="content-block">
+      <h2 class="serif section-heading">{data.sec8.title}</h2>
+      {data.sec8.paragraphs.map(p => <p class="prose">{p}</p>)}
+    </section>
+
+    <!-- Section 9: Case Study Breakdown -->
+    <section class="content-block case-study-box">
+      <div class="case-tag">VERIFIED IMPACT SCENARIO</div>
+      <h2 class="serif section-heading">{data.sec9.title}</h2>
+      {data.sec9.paragraphs.map(p => <p class="prose">{p}</p>)}
+    </section>
+
+    <!-- Section 10: Extensive Localized FAQ -->
+    <section class="content-block faq-section">
+      <h2 class="serif section-heading">{data.sec10.title}</h2>
+      <div class="faq-list">
+        {data.sec10.faqs.map(faq => (
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>{faq.q}</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p class="prose">{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section 11: Direct WhatsApp Strategic Protocol -->
+    <section class="content-block cta-banner">
+      <div class="cta-inner">
+        <h2 class="serif cta-heading">{data.sec11.title}</h2>
+        {data.sec11.paragraphs.map(p => <p class="cta-prose">{p}</p>)}
+        <div class="cta-action-area">
+          <a href="#consultation" class="cta-btn-primary">Book Consultation Above ↑</a>
+          <a href="https://wa.me/916353583148" target="_blank" rel="noopener noreferrer" class="cta-btn-whatsapp">
+            Chat on WhatsApp (+91 6353583148) →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Mobile Quick Action Bar -->
+  <div class="mobile-sticky-bar" id="mobile-cta">
+    <a href="https://wa.me/916353583148?text=Hi%20Scalify,%20I'd%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="mobile-sticky-btn">
+      <svg class="wa-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
+      </svg>
+      <span>Instant WhatsApp Consultation</span>
+    </a>
+  </div>
+
+  <Footer mode="city" city={city.city} citySlug={city.citySlug} country={city.country} countrySlug={city.countrySlug} />
+</BaseLayout>
+
+<style>
+  /* Layout & Spacing */
+  .page-container {
+    padding-top: 24px;
+    padding-bottom: 72px;
+  }
+  .breadcrumb {
+    font-size: 13px;
+    color: #8a8375;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.5;
+  }
+  .breadcrumb a {
+    color: #6b6459;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .breadcrumb a:hover {
+    color: #1c1c1a;
+    text-decoration: underline;
+  }
+  .breadcrumb .sep {
+    color: #b5ad9e;
+  }
+  .breadcrumb .active {
+    color: #1c1c1a;
+    font-weight: 500;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 56px;
+    border-bottom: 1px solid #e2ddd0;
+    margin-bottom: 48px;
+  }
+  .hero-text {
+    flex: 1.2;
+    min-width: 300px;
+  }
+  .badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #eae5d9;
+    color: #4a453c;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .pill-dot {
+    width: 6px;
+    height: 6px;
+    background: #25d366;
+    border-radius: 50%;
+  }
+  .hero-title {
+    font-size: 42px;
+    line-height: 1.15;
+    font-weight: 500;
+    margin: 0 0 20px;
+    color: #1c1c1a;
+  }
+  .hero-lede {
+    font-size: 17.5px;
+    line-height: 1.65;
+    color: #4a453c;
+    margin: 0 0 32px;
+    max-width: 620px;
+  }
+  .hero-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    background: #fff;
+    border: 1px solid #e2ddd0;
+    border-radius: 12px;
+    padding: 16px 20px;
+  }
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .stat-val {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1c1c1a;
+  }
+  .stat-lbl {
+    font-size: 11.5px;
+    color: #8a8375;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+  }
+  .hero-form-wrapper {
+    flex: 0.9;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Content Sections */
+  .content-block {
+    margin-bottom: 56px;
+  }
+  .section-heading {
+    font-size: 28px;
+    line-height: 1.25;
+    margin: 0 0 20px;
+    color: #1c1c1a;
+  }
+  .prose {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #38342d;
+    margin: 0 0 18px;
+  }
+  .highlighted-box {
+    background: #f0ebe0;
+    border: 1px solid #dfd8cb;
+    border-radius: 16px;
+    padding: 32px;
+  }
+
+  /* Deliverables Grid */
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .deliverable-card {
+    background: #fff;
+    border: 1px solid #e2ddd0;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  }
+  .card-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: #8a8375;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+  .card-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #1c1c1a;
+  }
+  .card-desc {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #57524a;
+    margin: 0;
+  }
+
+  /* Timeline */
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 24px;
+    border-left: 2px solid #d8d0c2;
+    padding-left: 24px;
+  }
+  .timeline-item {
+    position: relative;
+    padding-bottom: 8px;
+  }
+  .timeline-marker {
+    position: absolute;
+    left: -31px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background: #1c1c1a;
+    border: 3px solid #f7f5f0;
+    border-radius: 50%;
+  }
+  .timeline-title {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #1c1c1a;
+  }
+
+  /* Comparison Table */
+  .table-responsive {
+    overflow-x: auto;
+    margin-top: 24px;
+    border-radius: 12px;
+    border: 1px solid #e2ddd0;
+    background: #fff;
+  }
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+  }
+  .comparison-table th, .comparison-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ede8de;
+  }
+  .comparison-table th {
+    background: #f2ece1;
+    font-weight: 600;
+    font-size: 13px;
+    color: #4a453c;
+    letter-spacing: 0.02em;
+  }
+  .comparison-table .highlight-col {
+    background: #faf7f2;
+    font-weight: 600;
+    color: #1c1c1a;
+  }
+  .badge-check {
+    color: #1b8a3e;
+    font-weight: bold;
+    margin-right: 4px;
+  }
+
+  /* Playbooks */
+  .playbooks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .playbook-card {
+    background: #fff;
+    border: 1px solid #e2ddd0;
+    border-radius: 14px;
+    padding: 24px;
+  }
+  .playbook-title {
+    font-size: 18px;
+    margin: 0 0 12px;
+    color: #1c1c1a;
+  }
+
+  /* Case Study Box */
+  .case-study-box {
+    background: #1c1c1a;
+    color: #f7f5f0;
+    border-radius: 18px;
+    padding: 36px 40px;
+  }
+  .case-tag {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #d1c5b4;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .case-study-box .section-heading {
+    color: #f7f5f0;
+  }
+  .case-study-box .prose {
+    color: #e5ded5;
+  }
+
+  /* FAQ Accordion */
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .faq-item {
+    background: #fff;
+    border: 1px solid #e2ddd0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+  .faq-item[open] {
+    border-color: #c9c0ae;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+  .faq-question {
+    padding: 18px 22px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1c1c1a;
+  }
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+  .faq-icon {
+    font-size: 20px;
+    color: #8a8375;
+    font-weight: 300;
+    transition: transform 0.2s ease;
+  }
+  .faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+  }
+  .faq-answer {
+    padding: 0 22px 20px;
+  }
+  .faq-answer .prose {
+    margin: 0;
+    color: #4a453c;
+  }
+
+  /* CTA Banner */
+  .cta-banner {
+    background: #e9e3d5;
+    border-radius: 20px;
+    padding: 44px 36px;
+    text-align: center;
+  }
+  .cta-heading {
+    font-size: 32px;
+    margin: 0 0 16px;
+  }
+  .cta-prose {
+    max-width: 680px;
+    margin: 0 auto 28px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #4a453c;
+  }
+  .cta-action-area {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .cta-btn-primary {
+    background: #1c1c1a;
+    color: #f7f5f0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+  }
+  .cta-btn-primary:hover {
+    background: #33312c;
+  }
+  .cta-btn-whatsapp {
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    transition: opacity 0.15s ease;
+  }
+  .cta-btn-whatsapp:hover {
+    opacity: 0.92;
+  }
+
+  /* Mobile Sticky Bar */
+  .mobile-sticky-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(28, 28, 26, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 12px 16px;
+    z-index: 999;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.15);
+  }
+  .mobile-sticky-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14.5px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  /* Responsive Breakpoints */
+  @media (max-width: 960px) {
+    .hero-section {
+      flex-direction: column;
+      gap: 36px;
+    }
+    .hero-form-wrapper {
+      width: 100%;
+      justify-content: flex-start;
+    }
+    .hero-stats-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .deliverables-grid, .playbooks-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-title {
+      font-size: 34px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .page-container {
+      padding-top: 16px;
+      padding-bottom: 90px;
+    }
+    .hero-title {
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    .hero-lede {
+      font-size: 16px;
+    }
+    .section-heading {
+      font-size: 23px;
+    }
+    .prose {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .highlighted-box, .case-study-box, .cta-banner {
+      padding: 24px 20px;
+    }
+    .mobile-sticky-bar {
+      display: block;
+    }
+    .hero-stats-row {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 12px;
+    }
+    .timeline-container {
+      padding-left: 16px;
+    }
+    .timeline-marker {
+      left: -23px;
+    }
+  }
+</style>

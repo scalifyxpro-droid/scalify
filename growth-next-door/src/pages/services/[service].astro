@@ -1,0 +1,304 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import WhatsAppForm from "../../components/WhatsAppForm.astro";
+import servicesData from "../../data/services.json";
+import citiesData from "../../data/cities.json";
+import { generatePillarContent } from "../../lib/content.js";
+
+export function getStaticPaths() {
+  return servicesData.map((service) => ({
+    params: { service: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+const data = generatePillarContent(service);
+const canonical = `https://scalify.com/services/${service.slug}`;
+
+// Top featured cities for this service across international markets
+const featuredCities = citiesData.filter((c: any) => c.rank >= 3 && c.rank <= 6).slice(0, 24);
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": data.sec5.faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+};
+---
+<BaseLayout
+  title={data.meta.title}
+  description={data.meta.description}
+  canonical={canonical}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <Nav />
+  
+  <main class="wrap page-container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <a href="/services">Services</a>
+      <span class="sep">/</span>
+      <span class="active">{service.name}</span>
+    </nav>
+
+    <header class="hero-section">
+      <div class="hero-text">
+        <div class="badge-pill">
+          <span class="pill-dot"></span>
+          <span>{data.category.toUpperCase()} • ENTERPRISE PRACTICE</span>
+        </div>
+        <h1 class="serif hero-title">{service.name}</h1>
+        <p class="hero-lede">{service.shortDesc} Built and scaled by Scalify - A Digital Marketing Company. Serving high-growth enterprises across 50 international markets.</p>
+        
+        <div class="hero-highlights">
+          <div class="hl-item">
+            <strong>Target Fit:</strong> {service.whoFor}
+          </div>
+          <div class="hl-item">
+            <strong>Global Reach:</strong> Deployed in 500+ commercial city markets
+          </div>
+        </div>
+      </div>
+      <div class="hero-form-wrapper" id="consultation">
+        <WhatsAppForm preselectedService={service.name} formId="service-hero-form" />
+      </div>
+    </header>
+
+    <!-- Section 1: Overview & Market Strategy -->
+    <section class="content-block">
+      <h2 class="serif section-heading">{data.sec1.title}</h2>
+      {data.sec1.paragraphs.map(p => <p class="prose">{p}</p>)}
+    </section>
+
+    <!-- Section 2: Compounding Advantage -->
+    <section class="content-block highlighted-box">
+      <h2 class="serif section-heading">{data.sec2.title}</h2>
+      {data.sec2.paragraphs.map(p => <p class="prose">{p}</p>)}
+    </section>
+
+    <!-- Section 3: Deliverables Grid -->
+    <section class="content-block">
+      <h2 class="serif section-heading">{data.sec3.title}</h2>
+      <div class="deliverables-grid">
+        {data.sec3.deliverables.map((item, idx) => (
+          <div class="deliverable-card">
+            <div class="card-num">CAPABILITY 0{idx + 1}</div>
+            <h3 class="serif card-title">{item.title}</h3>
+            <p class="card-desc">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section 4: 5-Stage Framework -->
+    <section class="content-block">
+      <h2 class="serif section-heading">{data.sec4.title}</h2>
+      <div class="timeline-container">
+        {data.sec4.phases.map(item => (
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3 class="serif timeline-title">{item.phase}</h3>
+              <p class="prose">{item.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section: Technical Deep Dive & Best Practices -->
+    <section class="content-block highlighted-box">
+      <h2 class="serif section-heading">{data.secPillarDeepDive.title}</h2>
+      {data.secPillarDeepDive.paragraphs.map(p => <p class="prose">{p}</p>)}
+    </section>
+
+    <!-- Featured Locations -->
+    <section class="content-block">
+      <div class="section-head-row">
+        <div>
+          <h2 class="serif section-heading">Available in Top Global Markets</h2>
+          <p class="prose">Access localized execution for {service.name} across our priority city hubs:</p>
+        </div>
+        <a class="view-all-link" href="/countries">View All 50 Countries →</a>
+      </div>
+      <div class="city-grid">
+        {featuredCities.map((c: any) => (
+          <a class="city-pill-card" href={`/${c.countrySlug}/${c.citySlug}/${service.slug}`}>
+            <span class="city-name">{service.name.split(" (")[0]} in {c.city}</span>
+            <span class="city-meta">{c.country} • {c.currency}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Section 5: FAQs -->
+    <section class="content-block faq-section">
+      <h2 class="serif section-heading">{data.sec5.title}</h2>
+      <div class="faq-list">
+        {data.sec5.faqs.map(faq => (
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>{faq.q}</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p class="prose">{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="content-block cta-banner">
+      <div class="cta-inner">
+        <h2 class="serif cta-heading">Ready to scale {service.name}?</h2>
+        <p class="cta-prose">Connect directly with senior strategists at Scalify - A Digital Marketing Company. We provide rapid audits and campaign architecture over WhatsApp.</p>
+        <div class="cta-action-area">
+          <a href="#consultation" class="cta-btn-primary">Schedule Consultation Above ↑</a>
+          <a href="https://wa.me/916353583148" target="_blank" rel="noopener noreferrer" class="cta-btn-whatsapp">
+            Message on WhatsApp (+91 6353583148) →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile Sticky Action Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="https://wa.me/916353583148?text=Hi%20Scalify,%20I'd%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="mobile-sticky-btn">
+      <span>Instant WhatsApp Consultation</span>
+    </a>
+  </div>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-container {
+    padding-top: 24px;
+    padding-bottom: 72px;
+  }
+  .breadcrumb {
+    font-size: 13px;
+    color: #8a8375;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+  }
+  .breadcrumb a {
+    color: #6b6459;
+    text-decoration: none;
+  }
+  .breadcrumb .sep { color: #b5ad9e; }
+  .breadcrumb .active { color: #1c1c1a; font-weight: 500; }
+
+  .hero-section {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 56px;
+    border-bottom: 1px solid #e2ddd0;
+    margin-bottom: 48px;
+  }
+  .hero-text { flex: 1.2; min-width: 300px; }
+  .badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #eae5d9;
+    color: #4a453c;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .pill-dot { width: 6px; height: 6px; background: #25d366; border-radius: 50%; }
+  .hero-title { font-size: 44px; line-height: 1.15; font-weight: 500; margin: 0 0 20px; }
+  .hero-lede { font-size: 18px; line-height: 1.65; color: #4a453c; margin: 0 0 28px; max-width: 620px; }
+  .hero-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #e2ddd0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 14.5px;
+    color: #57524a;
+  }
+  .hero-highlights strong { color: #1c1c1a; }
+  .hero-form-wrapper { flex: 0.9; display: flex; justify-content: flex-end; }
+
+  .content-block { margin-bottom: 56px; }
+  .section-heading { font-size: 28px; line-height: 1.25; margin: 0 0 20px; color: #1c1c1a; }
+  .prose { font-size: 16px; line-height: 1.8; color: #38342d; margin: 0 0 18px; }
+  .highlighted-box { background: #f0ebe0; border: 1px solid #dfd8cb; border-radius: 16px; padding: 32px; }
+
+  .deliverables-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 24px; }
+  .deliverable-card { background: #fff; border: 1px solid #e2ddd0; border-radius: 14px; padding: 24px; }
+  .card-num { font-size: 11.5px; font-weight: 700; color: #8a8375; margin-bottom: 8px; letter-spacing: 0.05em; }
+  .card-title { font-size: 18px; margin: 0 0 10px; color: #1c1c1a; }
+  .card-desc { font-size: 14.5px; line-height: 1.65; color: #57524a; margin: 0; }
+
+  .timeline-container { display: flex; flex-direction: column; gap: 18px; margin-top: 24px; border-left: 2px solid #d8d0c2; padding-left: 24px; }
+  .timeline-item { position: relative; }
+  .timeline-marker { position: absolute; left: -31px; top: 4px; width: 12px; height: 12px; background: #1c1c1a; border: 3px solid #f7f5f0; border-radius: 50%; }
+  .timeline-title { font-size: 18px; margin: 0 0 8px; color: #1c1c1a; }
+
+  .section-head-row { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; }
+  .view-all-link { font-size: 14px; font-weight: 600; text-decoration: none; border-bottom: 1px solid #1c1c1a; padding-bottom: 2px; }
+  .city-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .city-pill-card { background: #fff; border: 1px solid #e2ddd0; border-radius: 12px; padding: 18px 20px; text-decoration: none; color: #1c1c1a; display: flex; flex-direction: column; gap: 4px; transition: border-color 0.15s ease, transform 0.15s ease; }
+  .city-pill-card:hover { border-color: #1c1c1a; transform: translateY(-2px); }
+  .city-name { font-size: 15px; font-weight: 600; }
+  .city-meta { font-size: 12.5px; color: #8a8375; }
+
+  .faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+  .faq-item { background: #fff; border: 1px solid #e2ddd0; border-radius: 12px; overflow: hidden; }
+  .faq-question { padding: 18px 22px; font-size: 16px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-question::-webkit-details-marker { display: none; }
+  .faq-icon { font-size: 20px; color: #8a8375; }
+  .faq-item[open] .faq-icon { transform: rotate(45deg); }
+  .faq-answer { padding: 0 22px 20px; }
+  .faq-answer .prose { margin: 0; color: #4a453c; }
+
+  .cta-banner { background: #e9e3d5; border-radius: 20px; padding: 44px 36px; text-align: center; }
+  .cta-heading { font-size: 32px; margin: 0 0 16px; }
+  .cta-prose { max-width: 680px; margin: 0 auto 28px; font-size: 16px; line-height: 1.7; color: #4a453c; }
+  .cta-action-area { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .cta-btn-primary { background: #1c1c1a; color: #f7f5f0; text-decoration: none; font-weight: 600; font-size: 15px; padding: 14px 28px; border-radius: 8px; }
+  .cta-btn-whatsapp { background: #25d366; color: #fff; text-decoration: none; font-weight: 600; font-size: 15px; padding: 14px 28px; border-radius: 8px; }
+
+  .mobile-sticky-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(28, 28, 26, 0.95); backdrop-filter: blur(8px); padding: 12px 16px; z-index: 999; }
+  .mobile-sticky-btn { display: flex; align-items: center; justify-content: center; background: #25d366; color: #fff; text-decoration: none; font-weight: 600; font-size: 14.5px; padding: 12px 18px; border-radius: 8px; width: 100%; }
+
+  @media (max-width: 960px) {
+    .hero-section { flex-direction: column; gap: 36px; }
+    .hero-form-wrapper { width: 100%; justify-content: flex-start; }
+    .deliverables-grid, .city-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 36px; }
+  }
+
+  @media (max-width: 720px) {
+    .page-container { padding-top: 16px; padding-bottom: 90px; }
+    .hero-title { font-size: 28px; }
+    .mobile-sticky-bar { display: block; }
+    .highlighted-box, .cta-banner { padding: 24px 20px; }
+  }
+</style>

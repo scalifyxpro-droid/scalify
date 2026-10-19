@@ -1,0 +1,8 @@
+# Dependencies & Builds
+**/node_modules/
+**/dist/
+**/.astro/
+
+# System files
+.DS_Store
+Thumbs.db

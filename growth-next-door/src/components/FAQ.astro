@@ -1,0 +1,40 @@
+---
+interface Props {
+  faqs: { q: string; a: string }[];
+}
+const { faqs } = Astro.props as Props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  })),
+};
+---
+<div class="faq-block">
+  <h2 class="serif faq-title">Frequently Asked Questions</h2>
+  <div class="faq-list">
+    {faqs.map((f) => (
+      <details class="faq-item">
+        <summary>{f.q}</summary>
+        <p>{f.a}</p>
+      </details>
+    ))}
+  </div>
+</div>
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<style>
+  .faq-block { padding: 20px 0 60px; }
+  .faq-title { font-size: 28px; font-weight: 500; margin: 0 0 28px; }
+  .faq-list { display: flex; flex-direction: column; gap: 1px; background: #e2ddd0; border: 1px solid #e2ddd0; border-radius: 4px; overflow: hidden; }
+  .faq-item { background: #fff; padding: 20px 24px; }
+  .faq-item summary { font-size: 16px; font-weight: 600; cursor: pointer; list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before { content: "+ "; color: #8a8375; }
+  .faq-item[open] summary::before { content: "\2212 "; }
+  .faq-item p { font-size: 14.5px; line-height: 1.65; color: #57524a; margin: 12px 0 0; }
+</style>

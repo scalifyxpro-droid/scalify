@@ -1,0 +1,265 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import WhatsAppForm from "../../components/WhatsAppForm.astro";
+import servicesData from "../../data/services.json";
+import citiesData from "../../data/cities.json";
+
+export function getStaticPaths() {
+  const countryMap = new Map();
+  for (const c of citiesData) {
+    if (!countryMap.has(c.countrySlug)) {
+      countryMap.set(c.countrySlug, {
+        country: c.country,
+        countrySlug: c.countrySlug,
+        currency: c.currency,
+        tier: c.tier
+      });
+    }
+  }
+  return [...countryMap.values()].map((c) => ({
+    params: { country: c.countrySlug },
+    props: { countryInfo: c },
+  }));
+}
+
+const { countryInfo } = Astro.props;
+const cities = citiesData.filter((c: any) => c.countrySlug === countryInfo.countrySlug).sort((a: any, b: any) => a.rank - b.rank);
+const canonical = `https://scalify.com/countries/${countryInfo.countrySlug}`;
+
+const countryFaqs = [
+  {
+    q: `How does Scalify support businesses across ${countryInfo.country}?`,
+    a: `Scalify provides full-funnel digital marketing services across all major cities in ${countryInfo.country}. We combine localized search intent targeting, paid media management, high-converting creative development, and attribution infrastructure to accelerate customer acquisition.`
+  },
+  {
+    q: `Can Scalify invoice in ${countryInfo.currency}?`,
+    a: `Yes, we provide flexible billing options in ${countryInfo.currency} or USD, ensuring straightforward corporate accounting for our clients based in ${countryInfo.country}.`
+  },
+  {
+    q: `How do you coordinate with our team across time zones?`,
+    a: `We maintain dedicated WhatsApp channels and scheduled sprint syncs so decision-makers in ${countryInfo.country} enjoy seamless same-day communication without communication lags.`
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": countryFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+};
+---
+<BaseLayout
+  title={`Digital Marketing Agency in ${countryInfo.country} | Scalify - A Digital Marketing Company`}
+  description={`Scalify delivers elite paid media, SEO, content, and conversion optimization to high-growth businesses across ${cities.length} cities in ${countryInfo.country}. Invoicing in ${countryInfo.currency} or USD.`}
+  canonical={canonical}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <Nav />
+  
+  <main class="wrap page-container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <a href="/countries">Countries</a>
+      <span class="sep">/</span>
+      <span class="active">{countryInfo.country}</span>
+    </nav>
+
+    <header class="hero-section">
+      <div class="hero-text">
+        <div class="badge-pill">
+          <span class="pill-dot"></span>
+          <span>SCALIFY IN {countryInfo.country.toUpperCase()} • {cities.length} CITIES SERVED</span>
+        </div>
+        <h1 class="serif hero-title">Digital Marketing Agency in {countryInfo.country}</h1>
+        <p class="hero-lede">Scalify - A Digital Marketing Company provides enterprise-grade performance marketing, SEO, paid media, and conversion architecture for ambitious brands across {countryInfo.country}. Invoicing available in {countryInfo.currency} or USD.</p>
+        
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <span class="stat-val">{cities.length}</span>
+            <span class="stat-lbl">Target Cities</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">31</span>
+            <span class="stat-lbl">Active Services</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">{countryInfo.currency}</span>
+            <span class="stat-lbl">Billing Currency</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">WhatsApp</span>
+            <span class="stat-lbl">Direct Support</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-form-wrapper" id="consultation">
+        <WhatsAppForm cityLabel={countryInfo.country} formId="country-hero-form" />
+      </div>
+    </header>
+
+    <!-- Country Overview & Market Analysis -->
+    <section class="content-block highlighted-box">
+      <h2 class="serif section-heading">Commercial Strategy & Market Nuances in {countryInfo.country}</h2>
+      <p class="prose">Expanding and dominating in {countryInfo.country} requires a nuanced approach to customer acquisition. Rather than applying generic international campaigns, Scalify constructs bespoke marketing funnels calibrated to local consumer psychology, search habits, and regional digital platforms across {countryInfo.country}.</p>
+      <p class="prose">Our growth teams manage campaigns spanning high-density flagship metropolitan hubs to high-growth regional industrial centers. We structure ad spend around verified payback windows, optimizing toward cash flow and sustainable profitability. Whether your company transacts in {countryInfo.currency} domestically or exports globally in USD, Scalify provides the technical firepower, creative testing velocity, and analytics clarity needed to win in {countryInfo.country}.</p>
+    </section>
+
+    <!-- Target Cities Directory -->
+    <section class="content-block">
+      <h2 class="serif section-heading">Select Your Target City in {countryInfo.country}</h2>
+      <p class="prose">Explore dedicated local SEO, paid media, and conversion blueprints tailored to each commercial market across {countryInfo.country}:</p>
+      
+      <div class="city-grid">
+        {cities.map((c: any) => (
+          <a class="city-card" href={`/${c.countrySlug}/${c.citySlug}/${servicesData[0].slug}`}>
+            <div class="city-name-row">
+              <span class="city-name">{c.city}</span>
+              <span class="city-badge">{c.tier}</span>
+            </div>
+            <div class="city-meta">
+              <span>{c.competition} Competition</span> • <span>{c.pricingPotential} Pricing</span>
+            </div>
+            <div class="city-cta">Explore Local Services →</div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="content-block">
+      <h2 class="serif section-heading">Full-Spectrum Marketing Services in {countryInfo.country}</h2>
+      <p class="prose">All 31 digital capabilities managed directly by senior growth practitioners:</p>
+      <div class="services-list-grid">
+        {servicesData.map((s: any) => (
+          <a class="service-chip" href={`/services/${s.slug}`}>
+            <span class="service-chip-name">{s.name}</span>
+            <span class="service-chip-cat">{s.category}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Country FAQ -->
+    <section class="content-block faq-section">
+      <h2 class="serif section-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        {countryFaqs.map(faq => (
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>{faq.q}</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p class="prose">{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="content-block cta-banner">
+      <div class="cta-inner">
+        <h2 class="serif cta-heading">Accelerate Growth in {countryInfo.country}</h2>
+        <p class="cta-prose">Schedule a direct strategy consultation with Scalify - A Digital Marketing Company today. Connect with our senior growth team on WhatsApp for same-day insights.</p>
+        <div class="cta-action-area">
+          <a href="#consultation" class="cta-btn-primary">Request Consultation Above ↑</a>
+          <a href="https://wa.me/916353583148" target="_blank" rel="noopener noreferrer" class="cta-btn-whatsapp">
+            Chat on WhatsApp (+91 6353583148) →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-sticky-bar">
+    <a href="https://wa.me/916353583148?text=Hi%20Scalify,%20I'd%20like%20to%20enquire%20about%20your%20services%20in%20{countryInfo.country}." target="_blank" rel="noopener noreferrer" class="mobile-sticky-btn">
+      <span>Instant WhatsApp Consultation</span>
+    </a>
+  </div>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-container { padding-top: 24px; padding-bottom: 72px; }
+  .breadcrumb { font-size: 13px; color: #8a8375; margin-bottom: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .breadcrumb a { color: #6b6459; text-decoration: none; }
+  .breadcrumb .sep { color: #b5ad9e; }
+  .breadcrumb .active { color: #1c1c1a; font-weight: 500; }
+
+  .hero-section { display: flex; gap: 48px; align-items: flex-start; justify-content: space-between; padding-bottom: 56px; border-bottom: 1px solid #e2ddd0; margin-bottom: 48px; }
+  .hero-text { flex: 1.2; min-width: 300px; }
+  .badge-pill { display: inline-flex; align-items: center; gap: 8px; background: #eae5d9; color: #4a453c; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; padding: 6px 12px; border-radius: 999px; margin-bottom: 18px; }
+  .pill-dot { width: 6px; height: 6px; background: #25d366; border-radius: 50%; }
+  .hero-title { font-size: 44px; line-height: 1.15; font-weight: 500; margin: 0 0 20px; }
+  .hero-lede { font-size: 18px; line-height: 1.65; color: #4a453c; margin: 0 0 28px; max-width: 620px; }
+  .hero-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; background: #fff; border: 1px solid #e2ddd0; border-radius: 12px; padding: 16px 20px; }
+  .stat-item { display: flex; flex-direction: column; }
+  .stat-val { font-size: 16px; font-weight: 700; color: #1c1c1a; }
+  .stat-lbl { font-size: 11.5px; color: #8a8375; text-transform: uppercase; margin-top: 2px; }
+  .hero-form-wrapper { flex: 0.9; display: flex; justify-content: flex-end; }
+
+  .content-block { margin-bottom: 56px; }
+  .section-heading { font-size: 28px; line-height: 1.25; margin: 0 0 20px; color: #1c1c1a; }
+  .prose { font-size: 16px; line-height: 1.8; color: #38342d; margin: 0 0 18px; }
+  .highlighted-box { background: #f0ebe0; border: 1px solid #dfd8cb; border-radius: 16px; padding: 32px; }
+
+  .city-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px; }
+  .city-card { background: #fff; border: 1px solid #e2ddd0; border-radius: 14px; padding: 22px; text-decoration: none; color: #1c1c1a; display: flex; flex-direction: column; gap: 8px; transition: border-color 0.15s ease, transform 0.15s ease; }
+  .city-card:hover { border-color: #1c1c1a; transform: translateY(-2px); }
+  .city-name-row { display: flex; justify-content: space-between; align-items: center; }
+  .city-name { font-size: 18px; font-weight: 600; }
+  .city-badge { font-size: 11px; background: #f0ebe0; color: #57524a; padding: 3px 8px; border-radius: 6px; font-weight: 600; }
+  .city-meta { font-size: 13px; color: #8a8375; }
+  .city-cta { font-size: 13px; font-weight: 600; color: #1c1c1a; margin-top: 6px; }
+
+  .services-list-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+  .service-chip { background: #fff; border: 1px solid #e2ddd0; border-radius: 12px; padding: 16px; text-decoration: none; color: #1c1c1a; display: flex; flex-direction: column; gap: 4px; transition: border-color 0.15s ease; }
+  .service-chip:hover { border-color: #1c1c1a; }
+  .service-chip-name { font-size: 14.5px; font-weight: 600; }
+  .service-chip-cat { font-size: 12px; color: #8a8375; }
+
+  .faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+  .faq-item { background: #fff; border: 1px solid #e2ddd0; border-radius: 12px; overflow: hidden; }
+  .faq-question { padding: 18px 22px; font-size: 16px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-question::-webkit-details-marker { display: none; }
+  .faq-icon { font-size: 20px; color: #8a8375; }
+  .faq-item[open] .faq-icon { transform: rotate(45deg); }
+  .faq-answer { padding: 0 22px 20px; }
+  .faq-answer .prose { margin: 0; color: #4a453c; }
+
+  .cta-banner { background: #e9e3d5; border-radius: 20px; padding: 44px 36px; text-align: center; }
+  .cta-heading { font-size: 32px; margin: 0 0 16px; }
+  .cta-prose { max-width: 680px; margin: 0 auto 28px; font-size: 16px; line-height: 1.7; color: #4a453c; }
+  .cta-action-area { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .cta-btn-primary { background: #1c1c1a; color: #f7f5f0; text-decoration: none; font-weight: 600; font-size: 15px; padding: 14px 28px; border-radius: 8px; }
+  .cta-btn-whatsapp { background: #25d366; color: #fff; text-decoration: none; font-weight: 600; font-size: 15px; padding: 14px 28px; border-radius: 8px; }
+
+  .mobile-sticky-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(28, 28, 26, 0.95); backdrop-filter: blur(8px); padding: 12px 16px; z-index: 999; }
+  .mobile-sticky-btn { display: flex; align-items: center; justify-content: center; background: #25d366; color: #fff; text-decoration: none; font-weight: 600; font-size: 14.5px; padding: 12px 18px; border-radius: 8px; width: 100%; }
+
+  @media (max-width: 960px) {
+    .hero-section { flex-direction: column; gap: 36px; }
+    .hero-form-wrapper { width: 100%; justify-content: flex-start; }
+    .hero-stats-row, .city-grid, .services-list-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-title { font-size: 36px; }
+  }
+
+  @media (max-width: 720px) {
+    .page-container { padding-top: 16px; padding-bottom: 90px; }
+    .hero-title { font-size: 28px; }
+    .hero-stats-row, .city-grid, .services-list-grid { grid-template-columns: 1fr; }
+    .mobile-sticky-bar { display: block; }
+    .highlighted-box, .cta-banner { padding: 24px 20px; }
+  }
+</style>
