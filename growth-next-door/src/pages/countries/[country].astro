@@ -26,7 +26,7 @@ export function getStaticPaths() {
 
 const { countryInfo } = Astro.props;
 const cities = citiesData.filter((c: any) => c.countrySlug === countryInfo.countrySlug).sort((a: any, b: any) => a.rank - b.rank);
-const canonical = `https://scalify.com/countries/${countryInfo.countrySlug}`;
+const canonical = `https://www.scalifyapp.com/countries/${countryInfo.countrySlug}`;
 
 const countryFaqs = [
   {

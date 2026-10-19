@@ -2,7 +2,7 @@ import citiesData from "../data/cities.json";
 import servicesData from "../data/services.json";
 
 export async function GET() {
-  const baseUrl = "https://scalify.com";
+  const baseUrl = "https://www.scalifyapp.com";
   const now = new Date().toISOString().split("T")[0];
 
   const urls = [];

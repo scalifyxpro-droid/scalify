@@ -16,7 +16,7 @@ export function getStaticPaths() {
 
 const { service } = Astro.props;
 const data = generatePillarContent(service);
-const canonical = `https://scalify.com/services/${service.slug}`;
+const canonical = `https://www.scalifyapp.com/services/${service.slug}`;
 
 // Top featured cities for this service across international markets
 const featuredCities = citiesData.filter((c: any) => c.rank >= 3 && c.rank <= 6).slice(0, 24);

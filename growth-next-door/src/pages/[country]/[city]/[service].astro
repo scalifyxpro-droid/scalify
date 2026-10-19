@@ -22,7 +22,7 @@ export function getStaticPaths() {
 
 const { city, service } = Astro.props;
 const data = generateComprehensiveCityContent(service, city);
-const canonical = `https://scalify.com/${city.countrySlug}/${city.citySlug}/${service.slug}`;
+const canonical = `https://www.scalifyapp.com/${city.countrySlug}/${city.citySlug}/${service.slug}`;
 
 // Schema Structured Data
 const faqSchema = {
