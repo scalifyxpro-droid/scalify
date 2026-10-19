@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Website Background Color: Warm Cream / Ivory (#f7f5f0) -->
+  <rect width="512" height="512" rx="120" fill="#f7f5f0" />
+  
+  <!-- Subtle Refined Border in Charcoal (#1c1c1a) & Accent Sand (#e2ddd0) -->
+  <rect x="12" y="12" width="488" height="488" rx="108" fill="none" stroke="#e2ddd0" stroke-width="14" />
+  <rect x="22" y="22" width="468" height="468" rx="98" fill="none" stroke="#1c1c1a" stroke-width="8" />
+
+  <!-- Scalify Editorial Serif 'S' in Primary Website Color #1c1c1a -->
+  <text x="246" y="375" 
+        font-family="'Playfair Display', Georgia, 'Work Sans', serif" 
+        font-size="360" 
+        font-weight="600" 
+        font-style="normal"
+        fill="#1c1c1a" 
+        letter-spacing="-0.02em"
+        text-anchor="middle">S</text>
+
+  <!-- Website Accent Dot in Muted Brand Sand (#8a8375) -->
+  <circle cx="388" cy="355" r="24" fill="#8a8375" />
+</svg>
